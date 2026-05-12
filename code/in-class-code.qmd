@@ -1,0 +1,54 @@
+---
+title: "in-class-code"
+format: pdf
+---
+
+# Packages
+```{r}
+#| label: load-packages
+
+# general use
+library(tidyverse)
+
+# file organization
+library(here)
+
+# data visualization
+library(naniar)
+library(patchwork)
+```
+
+## Data
+```{r}
+#| label: load-data
+veg <- read_csv(here("data", "veg.csv"))
+
+metadata <- read_csv(here("data", "vp_veg_metadata.csv"))
+```
+
+```{r}
+#| label: joining-meta-veg
+# create a new object from veg
+gl_implicitNA <- veg |> 
+  # filter all occurrences where transect_name contains VP
+  filter(str_detect(transect_name, "GL") &
+           site == "ncos") |> 
+  # group by year, pool, and species
+  group_by(year, transect_name, psoc) |>
+  # calculate mean percent cover
+  summarize(mean_pc = mean(percent_cover, na.rm = TRUE)) |> 
+  # ungroup data frame
+  ungroup() |> 
+  # create a new column called year_pool from year and transect name
+  unite("year_pool", year, transect_name, remove = TRUE) |>
+  # join with metadata by year_pool
+  left_join(metadata, by = "year_pool")
+
+
+
+
+
+```
+
+
+
