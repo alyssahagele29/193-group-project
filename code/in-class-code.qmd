@@ -284,6 +284,7 @@ slice_sample(invasive_pc, n = 10)
 
 
 # native species
+# species most significant: Stipa_pulchra and Distichlis_spicata
 native_interest <- c(
   "Stipa_pulchra",
   "Distichlis_spicata",
@@ -293,6 +294,7 @@ native_interest <- c(
 )
 
 # invasive / non-native species
+# species most significant: Festuca_perennis and Polypogon_monspeliensis
 non_native_interest <- c(
   "Festuca_perennis",
   "Polypogon_monspeliensis",
