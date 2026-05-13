@@ -277,6 +277,8 @@ slice_sample(invasive_pc, n = 10)
 ```
 
 
+# Interest species wrangling
+
 ```{r}
 #| label: native and non native species list
 
@@ -328,4 +330,62 @@ gl_invasive_interest <- gl_invasive_explicit0 |>
 gl_all_interest <- bind_rows(gl_native_interest, gl_invasive_interest)
 ```
 
+
+```{r}
+# data frame for vis 1
+gl_all_pc <- gl_all_interest  |> 
+  group_by(psoc, year, native) |> 
+  summarize(sum_pc = sum(sum_pc),
+            sum_quad = sum(num_quad)) |> 
+  ungroup() |> 
+  mutate(mean_pc = sum_pc/sum_quad)
+```
+
+```{r}
+# data frames for vis 3
+gl_native_tc <- gl_native_interest |> 
+  group_by(psoc, year_pool, native) |> 
+  summarize(sum_pc = sum(sum_pc)) |> 
+  ungroup()
+
+gl_invasive_tc <- gl_invasive_interest |> 
+  group_by(psoc, year_pool, native) |> 
+  summarize(sum_pc = sum(sum_pc)) |> 
+  ungroup()
+```
+
+
+# Visualizations
+
+```{r}
+#| label: vis-1
+ggplot(data = gl_all_pc,
+       aes(x = year,
+           y = mean_pc,
+           color = psoc)) +
+  geom_line() +
+  facet_wrap(~ native)
+```
+
+```{r}
+#| label: vis-3
+
+native_tc_plot <- ggplot(data = gl_native_tc,
+       aes(x = psoc,
+           y = sum_pc,
+           color = psoc)) +
+  geom_jitter() +
+  labs(title = "Native Total Cover") +
+  theme(legend.position = "none")
+
+invasive_tc_plot <- ggplot(data = gl_invasive_tc,
+       aes(x = psoc,
+           y = sum_pc,
+           color = psoc)) +
+  geom_jitter() +
+  labs(title = "Non-native Total Cover") +
+  theme(legend.position = "none")
+
+native_tc_plot + invasive_tc_plot
+```
 
