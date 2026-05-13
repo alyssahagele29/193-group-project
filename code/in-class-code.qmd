@@ -334,6 +334,7 @@ gl_all_interest <- bind_rows(gl_native_interest, gl_invasive_interest)
 
 
 ```{r}
+#| label: wrangling-vis-1
 # data frame for vis 1
 gl_all_pc <- gl_all_interest  |> 
   group_by(psoc, year, native) |> 
@@ -344,6 +345,14 @@ gl_all_pc <- gl_all_interest  |>
 ```
 
 ```{r}
+#| label: wrangling-vis-2
+# tbd
+
+```
+
+
+```{r}
+#| label: wrangling-vis-3
 # data frames for vis 3
 gl_native_tc <- gl_native_interest |> 
   group_by(psoc, year_pool, native) |> 
@@ -361,12 +370,14 @@ gl_invasive_tc <- gl_invasive_interest |>
 
 ```{r}
 #| label: vis-1
-ggplot(data = gl_all_pc,
+vis1 <- ggplot(data = gl_all_pc,
        aes(x = year,
            y = mean_pc,
            color = psoc)) +
   geom_line() +
   facet_wrap(~ native)
+
+vis1
 ```
 
 ```{r}
@@ -388,6 +399,7 @@ invasive_tc_plot <- ggplot(data = gl_invasive_tc,
   labs(title = "Non-native Total Cover") +
   theme(legend.position = "none")
 
-native_tc_plot + invasive_tc_plot
+vis3 <- native_tc_plot + invasive_tc_plot
+vis3
 ```
 
