@@ -105,6 +105,34 @@ gl_native_explicit0 <- veg |>
 ```
 
 ```{r}
+#| label: invasive-species-explicit%cover
+
+# creating new object from veg
+gl_invasive_explicit0 <- veg |> 
+  # filter all occurrences where transect_name contains GL & native
+  filter(str_detect(transect_name, "GL") &
+           site == "ncos" &
+           cover_category == "NON-NATIVE COVER") |> 
+  # complete all possible combinations of year, pool, psoc and distance
+  complete(year, transect_name, psoc, transect_distance,
+           # fill values of percent cover with 0
+           fill = list(percent_cover = 0)
+           ) |>
+  # group by year, pool, and psoc
+  group_by(year, transect_name, psoc) |>
+  # calculate total percent cover across all quads
+  summarize(sum_pc = sum(percent_cover, na.rm = TRUE)) |>
+  # ungroup the data frame
+  ungroup() |>
+  # create a new column called year_pool from year and transect name
+  unite("year_pool", year, transect_name, remove = TRUE) |> 
+  # join with metadata data frame
+  left_join(metadata, by = "year_pool") |> 
+  # calculate mean percent cover from total percent cover/number of quadrats
+  mutate(mean_pc = sum_pc/num_quad)
+```
+
+```{r}
 #| label: missingness-plots
 
 gg_miss_var(gl_implicitNA)
