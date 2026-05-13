@@ -282,7 +282,7 @@ slice_sample(invasive_pc, n = 10)
 
 
 # native species
-native_species <- c(
+native_interest <- c(
   "Stipa_pulchra",
   "Distichlis_spicata",
   "Deinandra_fasciculata",
@@ -291,7 +291,7 @@ native_species <- c(
 )
 
 # invasive / non-native species
-non_native_species <- c(
+non_native_interest <- c(
   "Festuca_perennis",
   "Polypogon_monspeliensis",
   "Bromus_hordeaceus",
@@ -300,7 +300,7 @@ non_native_species <- c(
 )
 
 # all selected species
-all_species <- c(
+all_interest <- c(
   "Stipa_pulchra",
   "Distichlis_spicata",
   "Deinandra_fasciculata",
@@ -314,5 +314,18 @@ all_species <- c(
 )
 ```
 
+```{r}
+#| label: filtering-interest-species
+
+gl_native_interest <- gl_native_explicit0 |> 
+  filter(psoc %in% native_interest) |> 
+  mutate(native = "native")
+
+gl_invasive_interest <- gl_invasive_explicit0 |> 
+  filter(psoc %in% non_native_interest) |> 
+  mutate(native = "non_native")
+
+gl_all_interest <- bind_rows(gl_native_interest, gl_invasive_interest)
+```
 
 
