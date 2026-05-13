@@ -279,8 +279,9 @@ slice_sample(invasive_pc, n = 10)
 
 ```{r}
 #| label: native and non native species list
-# native species
 
+
+# native species
 native_species <- c(
   "Stipa_pulchra",
   "Distichlis_spicata",
@@ -290,7 +291,6 @@ native_species <- c(
 )
 
 # invasive / non-native species
-
 non_native_species <- c(
   "Festuca_perennis",
   "Polypogon_monspeliensis",
@@ -300,7 +300,6 @@ non_native_species <- c(
 )
 
 # all selected species
-
 all_species <- c(
   "Stipa_pulchra",
   "Distichlis_spicata",
