@@ -277,6 +277,43 @@ slice_sample(invasive_pc, n = 10)
 ```
 
 
+```{r}
+#| label: native and non native species list
+# native species
+
+native_species <- c(
+  "Stipa_pulchra",
+  "Distichlis_spicata",
+  "Deinandra_fasciculata",
+  "Erigeron_canadensis",
+  "Symphyotrichum_subulatum"
+)
+
+# invasive / non-native species
+
+non_native_species <- c(
+  "Festuca_perennis",
+  "Polypogon_monspeliensis",
+  "Bromus_hordeaceus",
+  "Festuca_myuros",
+  "Medicago_polymorpha"
+)
+
+# all selected species
+
+all_species <- c(
+  "Stipa_pulchra",
+  "Distichlis_spicata",
+  "Deinandra_fasciculata",
+  "Erigeron_canadensis",
+  "Symphyotrichum_subulatum",
+  "Festuca_perennis",
+  "Polypogon_monspeliensis",
+  "Bromus_hordeaceus",
+  "Festuca_myuros",
+  "Medicago_polymorpha"
+)
+```
 
 
 
