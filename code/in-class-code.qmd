@@ -17,6 +17,7 @@ library(here)
 # data visualization
 library(naniar)
 library(patchwork)
+library(gghighlight)
 ```
 
 # Data
@@ -402,4 +403,117 @@ invasive_tc_plot <- ggplot(data = gl_invasive_tc,
 vis3 <- native_tc_plot + invasive_tc_plot
 vis3
 ```
+
+
+## alyssa visualizations
+
+### non native and native pc over time FACETED by transect
+```{r}
+#| label: alyssa wrangling for vis 1
+
+gl_implicitNA_alyssa <- veg |> 
+  # filter all occurrences where transect_name contains VP
+  filter(str_detect(transect_name, "GL") &
+           site == "ncos") |> 
+  # group by year, pool, and species
+  group_by(year, transect_name, psoc, cover_category) |>
+  # calculate mean percent cover
+  summarize(mean_pc = mean(percent_cover, na.rm = TRUE)) |> 
+  # ungroup data frame
+  ungroup() |> 
+  # create a new column called year_pool from year and transect name
+  unite("year_pool", year, transect_name, remove = TRUE) |>
+  # join with metadata by year_pool
+  left_join(metadata, by = "year_pool")
+
+
+grass_cover <- gl_implicitNA_alyssa |>
+  filter(cover_category %in% c("NATIVE COVER", "NON-NATIVE COVER"))
+
+gl_transects <- gl_implicitNA_alyssa |>
+  filter(
+    transect_name %in% c("GL-02", "GL-07", "GL-09", "GL-10",
+                         "GL-11", "GL-12", "GL-14", "GL-15"),
+    cover_category %in% c("NATIVE COVER", "NON-NATIVE COVER")
+  )
+
+
+
+```
+
+```{r}
+#| label: alyssa vis-1 faceted native / non native pc over time 
+
+
+gl_transects |>
+  group_by(year, transect_name, cover_category) |>
+  summarize(total_cover = sum(mean_pc, na.rm = TRUE)) |>
+  ggplot(aes(x = year,
+             y = total_cover,
+             color = cover_category)) +
+  geom_line() +
+  geom_point() +
+  facet_wrap(~ transect_name) +
+  labs(
+    title = "Native vs Non-Native Percent Cover Over Time Across GL Transects",
+    x = "Year",
+    y = "Total Percent Cover",
+    color = "Cover Category"
+  ) +
+  theme_bw()
+```
+
+
+### non native and native species of interest over time FACETED by species
+```{r}
+#| label: alyssa wrangling for vis 2 
+
+selected_species <- c(native_interest, non_native_interest)
+
+selected_species_cover <- gl_implicitNA |>
+  filter(psoc %in% selected_species) |>
+  mutate(
+    species_group = case_when(
+      psoc %in% native_interest ~ "Native",
+      psoc %in% non_native_interest ~ "Non-native"
+    )
+  )
+```
+
+
+```{r}
+#| label: alyssa vis-2 faceted species of interest over time ALL (mean pc)
+
+selected_species_cover |>
+  group_by(year, psoc, species_group) |>
+  summarize(total_cover = sum(mean_pc, na.rm = TRUE)) |>
+  ggplot(aes(x = year,
+             y = total_cover,
+             color = species_group)) +
+  geom_line(aes(group = psoc),
+            linewidth = 1.2) +
+  gghighlight(
+    use_direct_label = FALSE,
+    unhighlighted_params = list(
+      color = "gray70",
+      alpha = 0.6,
+      linewidth = 0.5
+    )
+  ) +
+  scale_color_manual(values = c(
+    "Native" = "#4A9782",
+    "Non-native" = "#C96B5C"
+  )) +
+  facet_wrap(~ psoc, scales = "free_y") +
+  labs(
+    title = "Selected Species Percent Cover Over Time",
+    x = "Year",
+    y = "Total Percent Cover",
+    color = "Species Group"
+  ) +
+  theme_bw()
+```
+
+
+
 
