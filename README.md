@@ -27,22 +27,19 @@ library(patchwork)
 ├── README.md
 ├── code                                          
 │   ├── draft-visualizations.pdf                  # visualizations to answer research question
-│   └── draft-visualizations.qmd
-│   └── in-class-code.pdf                         # class code for data management
+│   ├── draft-visualizations.qmd
+│   ├── in-class-code.pdf                         # class code for data management
 │   └── in-class-code.qmd
 ├── data
 │   ├── veg.csv                                   # vegetation survey data
 │   └── vp_veg_metadata.csv                       # transect information
-│   └── empty.qmd                                 # empty quarto document
 └── 193-group-project.Rproj
 ```
 
 ## Rendered output
 
-The rendered document for the draft visualizations is here
-[here]().
+The rendered document for the draft visualizations is [here]().
 
-The rendered document for the in-class code is here
-[here]().
+The rendered document for the in-class code is [here]().
 
 

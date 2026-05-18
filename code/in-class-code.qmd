@@ -365,6 +365,16 @@ gl_invasive_tc <- gl_invasive_interest |>
   ungroup()
 ```
 
+```{r}
+#| label: wrangling-vis-4
+gl_stacked_native <- gl_all_interest |> 
+  group_by(native, year) |> 
+  summarize(mean_pc_sum = sum(mean_pc)) |> 
+  ungroup() |> 
+  mutate(native)
+
+```
+
 
 # Visualizations
 
@@ -387,7 +397,15 @@ native_tc_plot <- ggplot(data = gl_native_tc,
        aes(x = psoc,
            y = sum_pc,
            color = psoc)) +
-  geom_jitter() +
+  geom_jitter(height = 0,
+              width = 0.2) +
+  stat_summary(geom = "pointrange",
+               # argument to calculate standard error
+               fun.data = mean_sdl,
+               fun.args = list(mult = 1),
+               size = 1,
+               linewidth = 1,
+               color = "red") +  
   labs(title = "Native Total Cover") +
   theme(legend.position = "none")
 
@@ -395,11 +413,31 @@ invasive_tc_plot <- ggplot(data = gl_invasive_tc,
        aes(x = psoc,
            y = sum_pc,
            color = psoc)) +
-  geom_jitter() +
+  geom_jitter(height = 0,
+              width = 0.2) +
+  stat_summary(geom = "pointrange",
+               # argument to calculate standard error
+               fun.data = mean_sdl,
+               fun.args = list(mult = 1),
+               size = 1,
+               linewidth = 1,
+               color = "red") +  
   labs(title = "Non-native Total Cover") +
   theme(legend.position = "none")
 
 vis3 <- native_tc_plot + invasive_tc_plot
 vis3
+```
+
+```{r}
+#| label: vis-4
+
+vis4 <- ggplot(data = gl_stacked_native,
+               aes(x = year,
+                   y = mean_pc_sum,
+                   fill = native)) +
+  geom_area()
+
+vis4
 ```
 
