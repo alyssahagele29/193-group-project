@@ -18,6 +18,7 @@ library(here)
 library(naniar)
 library(patchwork)
 library(gghighlight)
+library(scales)
 ```
 
 # Data
@@ -370,7 +371,7 @@ gl_invasive_tc <- gl_invasive_interest |>
 #| label: wrangling-vis-4
 gl_stacked_native <- gl_all_interest |> 
   group_by(native, year) |> 
-  summarize(mean_pc_sum = sum(mean_pc)) |> 
+  summarize(sum_pc_sum = sum(sum_pc)) |> 
   ungroup() |> 
   mutate(native)
 
@@ -385,7 +386,20 @@ vis1 <- ggplot(data = gl_all_pc,
        aes(x = year,
            y = mean_pc,
            color = psoc)) +
-  geom_line() +
+  geom_line(linewidth = 0.75) +
+  scale_color_manual(values = c(
+    "Stipa_pulchra" = "royalblue",
+    "Distichlis_spicata" = "lightblue3",
+    "Deinandra_fasciculata" = "turquoise3",
+    "Erigeron_canadensis" = "lightblue",
+    "Symphyotrichum_subulatum" = "turquoise",
+    "Festuca_perennis" = "red3",
+    "Polypogon_monspeliensis" = "darkred",
+    "Bromus_hordeaceus" = "firebrick",
+    "Festuca_myuros" = "red",
+    "Medicago_polymorpha" = "tomato"
+  )) +
+  theme_bw() +
   facet_wrap(~ native)
 
 vis1
@@ -407,8 +421,16 @@ native_tc_plot <- ggplot(data = gl_native_tc,
                size = 1,
                linewidth = 1,
                color = "red") +  
-  labs(title = "Native Total Cover") +
-  theme(legend.position = "none")
+  labs(title = "Native Total Cover") + 
+  scale_color_manual(values = c(
+    "Stipa_pulchra" = "royalblue",
+    "Distichlis_spicata" = "lightblue3",
+    "Deinandra_fasciculata" = "turquoise3",
+    "Erigeron_canadensis" = "lightblue",
+    "Symphyotrichum_subulatum" = "turquoise"
+  )) +
+  theme_bw() +
+  theme(legend.position = "none") 
 
 invasive_tc_plot <- ggplot(data = gl_invasive_tc,
        aes(x = psoc,
@@ -422,28 +444,33 @@ invasive_tc_plot <- ggplot(data = gl_invasive_tc,
                fun.args = list(mult = 1),
                size = 1,
                linewidth = 1,
-               color = "red") +  
+               color = "blue") +  
   labs(title = "Non-native Total Cover") +
+  scale_color_manual(values = c(
+    "Festuca_perennis" = "red3",
+    "Polypogon_monspeliensis" = "darkred",
+    "Bromus_hordeaceus" = "firebrick",
+    "Festuca_myuros" = "firebrick2",
+    "Medicago_polymorpha" = "tomato"
+  )) +
+  theme_bw() +
   theme(legend.position = "none")
 
 vis3 <- native_tc_plot + invasive_tc_plot
 vis3
 ```
 
-<<<<<<< HEAD
 ```{r}
 #| label: vis-4
 
 vis4 <- ggplot(data = gl_stacked_native,
                aes(x = year,
-                   y = mean_pc_sum,
+                   y = sum_pc_sum,
                    fill = native)) +
   geom_area()
 
 vis4
 ```
-
-=======
 
 ## alyssa visualizations
 
@@ -554,7 +581,3 @@ selected_species_cover |>
   theme_bw()
 ```
 
-
-
-
->>>>>>> 556db92eb658f3daa46cc7fa5243c0d7e2a7bbe8
