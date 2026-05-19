@@ -18,7 +18,6 @@ library(here)
 library(naniar)
 library(patchwork)
 library(gghighlight)
-library(scales)
 ```
 
 # Data
@@ -371,7 +370,7 @@ gl_invasive_tc <- gl_invasive_interest |>
 #| label: wrangling-vis-4
 gl_stacked_native <- gl_all_interest |> 
   group_by(native, year) |> 
-  summarize(sum_pc_sum = sum(sum_pc)) |> 
+  summarize(mean_pc_sum = sum(mean_pc)) |> 
   ungroup() |> 
   mutate(native)
 
@@ -386,20 +385,7 @@ vis1 <- ggplot(data = gl_all_pc,
        aes(x = year,
            y = mean_pc,
            color = psoc)) +
-  geom_line(linewidth = 0.75) +
-  scale_color_manual(values = c(
-    "Stipa_pulchra" = "royalblue",
-    "Distichlis_spicata" = "lightblue3",
-    "Deinandra_fasciculata" = "turquoise3",
-    "Erigeron_canadensis" = "lightblue",
-    "Symphyotrichum_subulatum" = "turquoise",
-    "Festuca_perennis" = "red3",
-    "Polypogon_monspeliensis" = "darkred",
-    "Bromus_hordeaceus" = "firebrick",
-    "Festuca_myuros" = "red",
-    "Medicago_polymorpha" = "tomato"
-  )) +
-  theme_bw() +
+  geom_line() +
   facet_wrap(~ native)
 
 vis1
@@ -421,16 +407,8 @@ native_tc_plot <- ggplot(data = gl_native_tc,
                size = 1,
                linewidth = 1,
                color = "red") +  
-  labs(title = "Native Total Cover") + 
-  scale_color_manual(values = c(
-    "Stipa_pulchra" = "royalblue",
-    "Distichlis_spicata" = "lightblue3",
-    "Deinandra_fasciculata" = "turquoise3",
-    "Erigeron_canadensis" = "lightblue",
-    "Symphyotrichum_subulatum" = "turquoise"
-  )) +
-  theme_bw() +
-  theme(legend.position = "none") 
+  labs(title = "Native Total Cover") +
+  theme(legend.position = "none")
 
 invasive_tc_plot <- ggplot(data = gl_invasive_tc,
        aes(x = psoc,
@@ -444,33 +422,28 @@ invasive_tc_plot <- ggplot(data = gl_invasive_tc,
                fun.args = list(mult = 1),
                size = 1,
                linewidth = 1,
-               color = "blue") +  
+               color = "red") +  
   labs(title = "Non-native Total Cover") +
-  scale_color_manual(values = c(
-    "Festuca_perennis" = "red3",
-    "Polypogon_monspeliensis" = "darkred",
-    "Bromus_hordeaceus" = "firebrick",
-    "Festuca_myuros" = "firebrick2",
-    "Medicago_polymorpha" = "tomato"
-  )) +
-  theme_bw() +
   theme(legend.position = "none")
 
 vis3 <- native_tc_plot + invasive_tc_plot
 vis3
 ```
 
+<<<<<<< HEAD
 ```{r}
 #| label: vis-4
 
 vis4 <- ggplot(data = gl_stacked_native,
                aes(x = year,
-                   y = sum_pc_sum,
+                   y = mean_pc_sum,
                    fill = native)) +
   geom_area()
 
 vis4
 ```
+
+=======
 
 ## alyssa visualizations
 
@@ -581,3 +554,117 @@ selected_species_cover |>
   theme_bw()
 ```
 
+```{r}
+#| label: alyssa vis-3 species richness native / non native wrangling
+
+
+# create new object from gl_explicit0
+# create new object from gl_implicitNA_alyssa
+alyssa_species_richness <- gl_implicitNA_alyssa |> 
+  
+  # group by year, transect, and cover category
+  group_by(year, transect_name, cover_category) |> 
+  
+  # filter data frame to include only native and non-native species
+  # also filter percent cover to identify species presence
+  filter(cover_category %in% c("NATIVE COVER",
+                               "NON-NATIVE COVER"),
+         mean_pc > 0) |> 
+  
+  # species richness calculation
+  summarize(spp_rich = n_distinct(psoc)) |> 
+  
+  # ungroup data frame
+  ungroup()
+```
+
+```{r}
+#| label: alyssa vis-3 species richness native / non native boxplot
+
+# native species richness bar plot
+native_species_rich |>
+  
+  # create ggplot
+  ggplot(aes(x = transect_name,
+             y = spp_rich,
+             fill = transect_name)) +
+  # create bars
+  geom_col() +
+  # separate panels by year
+  facet_wrap(~ year) +
+  
+  # add labels
+  labs(
+    title = "Native Species Richness Across Grassland Transects",
+    x = "Transect",
+    y = "Native Species Richness"
+  ) +
+  
+  # black and white theme
+  theme_bw() +
+  
+  # remove legend
+  theme(
+    legend.position = "none"
+  )
+```
+
+```{r}
+#| label: alyssa vis-3 species richness native barplot
+# native species richness over time
+native_species_rich_plot <- native_species_rich |>
+  
+  # create ggplot
+  ggplot(aes(x = year,
+             y = spp_rich,
+             group = transect_name)) +
+  
+  # create bars
+  geom_col(fill = "#4A9782") +
+  
+  # facet by transect
+  facet_wrap(~ transect_name) +
+  
+  # add labels
+  labs(
+    title = "Native Species Richness Over Time",
+    x = "Year",
+    y = "Native Species Richness"
+  ) +
+  
+  # black and white theme
+  theme_bw()
+```
+
+```{r}
+#| label: alyssa vis-3 species richness invasive boxplot
+# invasive/non-native species richness over time
+invasive_species_rich_plot <- invasive_species_rich |>
+  
+  # create ggplot
+  ggplot(aes(x = year,
+             y = spp_rich,
+             group = transect_name)) +
+  
+  # create bars
+  geom_col(fill = "#D16D5B") +
+  
+  # facet by transect
+  facet_wrap(~ transect_name) +
+  
+  # add labels
+  labs(
+    title = "Non-native Species Richness Over Time",
+    x = "Year",
+    y = "Non-native Species Richness"
+  ) +
+  
+  # black and white theme
+  theme_bw()
+```
+
+```{r}
+native_species_rich_plot / invasive_species_rich_plot
+```
+
+>>>>>>> 556db92eb658f3daa46cc7fa5243c0d7e2a7bbe8
