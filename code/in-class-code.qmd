@@ -578,6 +578,8 @@ alyssa_species_richness <- gl_implicitNA_alyssa |>
   ungroup()
 ```
 
+### bar plots 
+
 ```{r}
 #| label: alyssa vis-3 species richness native / non native boxplot
 
@@ -665,6 +667,35 @@ invasive_species_rich_plot <- invasive_species_rich |>
 
 ```{r}
 native_species_rich_plot / invasive_species_rich_plot
+```
+
+### density plots 
+```{r}
+# native richness density plot
+native_richness_plot_density <- native_species_rich |>
+  
+  # create ggplot
+  ggplot(aes(x = spp_rich,
+             fill = transect_name)) +
+  
+  # create density plot
+  geom_density(alpha = 0.6) +
+  
+  # facet by transect
+  facet_wrap(~ transect_name) +
+  
+  # add labels
+  labs(
+    title = "Distribution of Native Species Richness",
+    x = "Native Species Richness",
+    y = "Density"
+  ) +
+  
+  # black and white theme
+  theme_bw()
+
+# display plot
+native_richness_plot_density
 ```
 
 >>>>>>> 556db92eb658f3daa46cc7fa5243c0d7e2a7bbe8
