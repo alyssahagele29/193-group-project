@@ -3,4 +3,12 @@ title: "FinalPaper"
 format: pdf 
 ---
 
-xx 
+# Introduction 
+
+# Methods 
+
+# Results 
+
+# Discussion 
+
+# References 
