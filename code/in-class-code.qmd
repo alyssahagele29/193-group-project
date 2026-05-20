@@ -632,7 +632,7 @@ species_richness_bar_plot
 ```
 
 ```{r}
-#| label: alyssa vis-3 species richness native barplot
+#| label: alyssa vis-3 native species richness barplot
 # native species richness over time
 native_species_rich_plot <- native_species_rich |>
   
@@ -689,37 +689,11 @@ invasive_species_rich_plot <- invasive_species_rich |>
 native_species_rich_plot / invasive_species_rich_plot
 ```
 
-### density plots 
-```{r}
-# native richness density plot
-native_richness_plot_density <- native_species_rich |>
-  
-  # create ggplot
-  ggplot(aes(x = spp_rich,
-             fill = transect_name)) +
-  
-  # create density plot
-  geom_density(alpha = 0.6) +
-  
-  # facet by transect
-  facet_wrap(~ transect_name) +
-  
-  # add labels
-  labs(
-    title = "Distribution of Native Species Richness",
-    x = "Native Species Richness",
-    y = "Density"
-  ) +
-  
-  # black and white theme
-  theme_bw()
 
-# display plot
-native_richness_plot_density
-```
-
-### density plots
+### d plot all FINAL 
 ```{r}
+#| label: alyssa vis-4 density plot ALL native/non native richness
+
 # combine native and non-native richness data
 all_species_richness <- bind_rows(
   
@@ -772,6 +746,82 @@ species_richness_density_plot <- all_species_richness |>
 
 # display plot
 species_richness_density_plot
+```
+
+
+### d plot by selected species richness
+```{r}
+#| label: wrangling for alyssa vis-5 density plot focus native/non native richness
+# create species richness object for selected species
+selected_species_richness <- selected_species_cover |>
+  
+  # filter percent cover to identify species presence
+  filter(mean_pc > 0) |>
+  
+  # group by year, transect, and native/non-native group
+  group_by(year, transect_name, species_group) |>
+  
+  # count number of unique species present
+  summarize(spp_rich = n_distinct(psoc),
+            .groups = "drop")
+```
+
+
+```{r}
+#| label: alyssa vis-5 density plot focus native/non native richness
+# create species richness object for selected species
+selected_species_richness <- selected_species_cover |>
+  
+  # filter percent cover to identify species presence
+  filter(mean_pc > 0) |>
+  
+  # group by year, transect, and species group
+  group_by(year, transect_name, species_group) |>
+  
+  # count unique species present
+  summarize(spp_rich = n_distinct(psoc),
+            .groups = "drop")
+
+# create density plot
+selected_species_richness_density <- selected_species_richness |>
+  
+  # create ggplot
+  ggplot(aes(x = spp_rich,
+             fill = species_group,
+             color = species_group)) +
+  
+  # create overlapping density plots
+  geom_density(alpha = 0.4,
+               linewidth = 1) +
+  
+  # facet by transect
+  facet_wrap(~ transect_name) +
+  
+  # customize colors
+  scale_fill_manual(values = c(
+    "Native" = "#4A9782",
+    "Non-native" = "#D16D5B"
+  )) +
+  
+  scale_color_manual(values = c(
+    "Native" = "#4A9782",
+    "Non-native" = "#D16D5B"
+  )) +
+  
+  # add labels
+  labs(
+    title = "Selected Species Richness Distributions",
+    x = "Species Richness",
+    y = "Density",
+    fill = "Species Group",
+    color = "Species Group"
+  ) +
+  
+  # black and white theme
+  theme_bw()
+
+# display plot
+selected_species_richness_density
 ```
 
 >>>>>>> 556db92eb658f3daa46cc7fa5243c0d7e2a7bbe8
