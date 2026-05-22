@@ -17,11 +17,7 @@ should include ideas for analyses to answer questions and some preliminary code 
 
 - Final product: trifold brochure made on canva showing: (5) native species of focus in the grassland habitat + two non native species + restoration techniques + history of NCOS
 - Would possibly replace online images of plant species with our own if we have the time to go to NCOS and I.D. plants
-
-- This is our rough draft for the elective brochure:
-
-![Outside brochure](/images/Outside.png.png)
-![Inside brochure](/images/Inside.png.png)
+- Please see our rough draft for the elective brochure in the README:
 
 **Plan**
 
