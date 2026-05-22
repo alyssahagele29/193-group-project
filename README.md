@@ -42,4 +42,8 @@ The rendered document for sample visualizations is [here](https://github.com/aly
 
 The rendered document for the timeline check-in is [here](https://github.com/alyssahagele29/193-group-project/blob/main/code/timeline-check-in.pdf).
 
+The rendered images for our advanced elective outline is
+![here](/images/Outside.png)
+![here](/images/Inside.png)
+
 

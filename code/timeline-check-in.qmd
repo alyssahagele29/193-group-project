@@ -14,12 +14,10 @@ should include ideas for analyses to answer questions and some preliminary code 
 # Other exploratory visualizations
 
 # Plan for elective
-should include some description/image of drafts
 
-should include plan for making progress in the next two weeks
-
-- Final product: trifold brochure made on canva showing mostly (5) native species of focus in the grassland habitat + two non native species 
+- Final product: trifold brochure made on canva showing: (5) native species of focus in the grassland habitat + two non native species + restoration techniques + history of NCOS
 - Would possibly replace online images of plant species with our own if we have the time to go to NCOS and I.D. plants
+- Please see our rough draft for the elective brochure in the README:
 
 **Plan**
 
