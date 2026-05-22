@@ -1,6 +1,9 @@
 ---
 title: "in-class-code"
 format: pdf
+execute: 
+  message: false
+  warning: false
 ---
 
 # Packages
@@ -430,7 +433,6 @@ vis3 <- native_tc_plot + invasive_tc_plot
 vis3
 ```
 
-<<<<<<< HEAD
 ```{r}
 #| label: vis-4
 
@@ -442,8 +444,6 @@ vis4 <- ggplot(data = gl_stacked_native,
 
 vis4
 ```
-
-=======
 
 ## alyssa visualizations
 
@@ -482,8 +482,7 @@ gl_transects <- gl_implicitNA_alyssa |>
 ```
 
 ```{r}
-#| label: alyssa vis-1 faceted native / non native pc over time 
-
+#| label: alyssa vis-1 faceted native non native pc over time 
 
 gl_transects |>
   group_by(year, transect_name, cover_category) |>
@@ -555,7 +554,7 @@ selected_species_cover |>
 ```
 
 ```{r}
-#| label: alyssa vis-3 species richness native / non native wrangling
+#| label: alyssa vis-3 species richness native non native wrangling
 
 
 # create new object from gl_explicit0
@@ -577,7 +576,7 @@ alyssa_species_richness <- gl_implicitNA_alyssa |>
 ### bar plots 
 
 ```{r}
-#| label: alyssa vis-3 species richness native / non native boxplot + wrangling
+#| label: alyssa vis-3 species richness native non native boxplot + wrangling
 
 # combine native and non-native richness data
 all_species_richness <- bind_rows(
@@ -643,7 +642,7 @@ native_species_rich_plot <- native_species_rich |>
 ```
 
 ```{r}
-#| label: alyssa vis-3 species richness invasive boxplot
+#| label: alyssa vis-3 species richness invasive barplot
 
 # invasive/non-native species richness over time
 invasive_species_rich_plot <- invasive_species_rich |>
@@ -665,14 +664,14 @@ invasive_species_rich_plot <- invasive_species_rich |>
   theme_bw()
 ```
 
-```{r}
+```{r fig.height=8}
 native_species_rich_plot / invasive_species_rich_plot
 ```
 
 
 ### d plot all FINAL 
 ```{r}
-#| label: alyssa vis-4 density plot ALL native/non native richness
+#| label: alyssa vis-4 density plot ALL native non native richness
 
 # combine native and non-native richness data
 all_species_richness <- bind_rows(
@@ -720,7 +719,7 @@ species_richness_density_plot
 
 ### d plot by selected species richness
 ```{r}
-#| label: wrangling for alyssa vis-5 density plot focus native/non native richness
+#| label: wrangling for alyssa vis-5 density plot focus native non native richness
 
 # create species richness object for selected species
 selected_species_richness <- selected_species_cover |>
@@ -735,7 +734,7 @@ selected_species_richness <- selected_species_cover |>
 
 
 ```{r}
-#| label: alyssa vis-5 density plot focus native/non native richness
+#| label: alyssa vis-5 density plot focus native non native richness
 
 
 # create species richness object for selected species
@@ -780,5 +779,3 @@ selected_species_richness_density <- selected_species_richness |>
 # display plot
 selected_species_richness_density
 ```
-
->>>>>>> 556db92eb658f3daa46cc7fa5243c0d7e2a7bbe8
