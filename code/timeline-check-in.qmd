@@ -1,0 +1,18 @@
+---
+title: "Timeline check-in"
+author: "Alyssa Hagele, Abby Malech, Henderson Vo"
+date: 2026-05-22
+format: pdf
+---
+
+# Ideas for analysis and background
+should include some citations (not all)
+should include ideas for analyses to answer questions and some preliminary code to run those analyses
+
+# Visualizations directly relevant to answering questions
+
+# Other exploratory visualizations
+
+# Plan for elective
+should include some description/image of drafts
+should include plan for making progress in the next two weeks
