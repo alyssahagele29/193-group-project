@@ -38,8 +38,8 @@ library(patchwork)
 
 ## Rendered output
 
-The rendered document for the draft visualizations is [here]().
+The rendered document for sample visualizations is [here](https://github.com/alyssahagele29/193-group-project/blob/main/code/in-class-code.pdf).
 
-The rendered document for the in-class code is [here]().
+The rendered document for the timeline check-in is [here](https://github.com/alyssahagele29/193-group-project/blob/main/code/timeline-check-in.pdf).
 
 
