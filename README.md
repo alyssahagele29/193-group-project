@@ -26,13 +26,15 @@ library(patchwork)
 .
 ├── README.md
 ├── code                                          
-│   ├── draft-visualizations.pdf                  # visualizations to answer research question
-│   ├── draft-visualizations.qmd
+│   ├── timeline-check-in.pdf                     # week 8 timeline check in
+│   ├── timeline-check-in.qmd
 │   ├── in-class-code.pdf                         # class code for data management
-│   └── in-class-code.qmd
+│   ├── in-class-code.qmd
+│   └── FinalPaper.qmd                            # draft for final paper
 ├── data
 │   ├── veg.csv                                   # vegetation survey data
 │   └── vp_veg_metadata.csv                       # transect information
+├── images
 └── 193-group-project.Rproj
 ```
 
