@@ -5,7 +5,7 @@
 
 - This repository contains data and code to explore patterns in native grassland vegetation abundance at North Campus Open Space. 
 
-- The research question we are trying to answer is: How have key species changed through time in grassland habitats?
+- The research question we are trying to answer is: **How has percent cover of key native species and overall native species richness changed through time in grasslands compared to non native species?**
 
 To work with the code in this repository, you will need the following packages:
 
