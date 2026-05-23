@@ -19,6 +19,8 @@ We will not be performing a statistical analysis for our project because we are 
 
 Besides analyzing our data, we will need literary resources to inform the nature of our question and why these changes over time are important to wetland habitat's and the overall California landscape. Our literature review will include a mix of peer reviewed journals, the CCBER native plant catalog (found [here](https://www.ncos.ccber.ucsb.edu/native-plant-habitats)), iNaturalist observations and descriptions of plants, and the 2024 monitoring report. These resources may help us to get a more holistic understanding of grassland habitat conservation at NCOS because restoration efforts are one of the primary drivers of change in native species cover and richness here.
 
+One journal that we found called ["Restoring wetland prairies: tradeoffs among native plant cover, community composition, and ecosystem functioning"](https://esajournals.onlinelibrary.wiley.com/doi/full/10.1890/ES12-00261.1) examines different environmental conditions in which restoration techniques were applied to wetland prairies in Oregon, U.S. Restoration treatments yielded different trade-offs in terms of productivity, soil composition, fungal infection rates. These results could be helpful during our discussion portion where we will make connections to our literature and sections of the CCBER monitoring report, such as `Vegetation Success Criteria`, `Spatial analysis of sediment accumulation and soil carnon storage in a restored wetland`, and `Vegetation Monitoring Data`. This can inform us in why patterns in species cover and species richness occur the way they do over time, perhaps based on the type of restoration techniques that were applied to the grassland habitat. 
+
 # Visualizations 
 
 ![Figure 1](../images/species-richness-time.png)
@@ -28,24 +30,26 @@ In this figure, each line represents the total percent cover of a particular spe
 ![Figure 2](../images/species-perc-cover-time.png)
 In this figure, each line represents the total percent cover of a particular species of vegetation over time (2021-2025), and each panel represents the trend for one species. On average, native vegetation appears to decrease or maintain their level of percent cover over time while non-native vegetation appears to increase or maintain their level of percent cover over time. This answers part of our question of how native vegetation percent cover has changed over time compared to non-natives: natives decreased or stayed the same, and non-natives increased or stayed the same.
 
-
 ## Exploratory visualizations
 
 ![Figure 3](../images/chosen-specues-richness-distributions.png)
+In this figure, we compare species richness densities across Native and non-native species groups. These are for the specific key species we chose to analyse. Dispersion for both groups tend to vary across transects. Native species tend to have more than one peak, such as a higher densities at 3-4 native species in transect 12.Non-native species richness tends to have greater spread in transects 2, 10, 11, and 15, but seem to have lower densities on average than native species richness. 
 
+Using a density plot for our chosen species might not be the best indicator of change over time, as this is a smaller group with not enough data to make a confident interpretation of the trends. It can show the distribution of species richness well, however, it does not give us a temporal analysis that we are needing to answer our research question. 
 
 ![Figure 4](../images/native-non-native-richness-distributions.png)
+In this figure, we compare species richness densities across Native and non-native species groups for *all* species types that occur in the grassland habitat. Compared to our first density graph, there is a greater range of species richness for this plot (up to 25 species per transect). There is also a significant difference between the shape of each plot for native vs. non-native species richness. On average, native species have peaks of higher densities that occur at low species richness (around 0-10 species occurrences), whereas non-native species have peaks at high species richness (around 10-20 species occurrences). 
+
+Again, a density plot is not able to tell us temporal trends which is significant to answering our research question. However, looking at species richness across all species gives us a better indication of how non-native richness is higher, which could indicate that non-native species presence is higher than native species presence in general.
 
 ![Figure 5](../images/native-non-native-percover.png)
 In this figure, each line represents the total percent cover of a particular native classification of vegetation over time (2021-2025), and each panel represents the trend for one transect. On average, native vegetation appears to increase or maintain their level of percent cover over time while non-native vegetation appears to increase in percent cover over time. This answers part of our question of how native vegetation percent cover has changed over time compared to non-natives: natives increased or stayed the same, and non-natives increased, demonstrating that they don't necessarily move in opposition to each other overall.
-
-
 
 # Plan for elective
 
 - Final product: trifold brochure made on canva showing: (5) native species of focus in the grassland habitat + two non native species + restoration techniques + history of NCOS
 - Would possibly replace online images of plant species with our own if we have the time to go to NCOS and I.D. plants
-- Please see our rough draft for the elective brochure in the README:
+- Please see our rough draft for the elective brochure in the **README**
 
 **Plan**
 
