@@ -596,7 +596,7 @@ species_richness_bar_plot <- all_species_richness |>
              y = spp_rich,
              fill = type)) +
   # create side-by-side bars
-  geom_col(position = "dodge") +
+  geom_col() +
   # facet by transect
   facet_wrap(~ transect_name) +
   # customize colors
