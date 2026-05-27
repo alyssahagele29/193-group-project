@@ -502,6 +502,14 @@ gl_transects |>
   theme_bw()
 ```
 
+```{r}
+
+
+
+
+
+
+```
 
 ### non native and native species of interest over time FACETED by species
 ```{r}
@@ -526,6 +534,7 @@ selected_species_cover <- gl_implicitNA |>
 selected_species_cover |>
   group_by(year, psoc, species_group) |>
   summarize(total_cover = sum(mean_pc, na.rm = TRUE)) |>
+  arrange(desc(total_cover)) |> 
   ggplot(aes(x = year,
              y = total_cover,
              color = species_group)) +
@@ -543,7 +552,7 @@ selected_species_cover |>
     "Native" = "#4A9782",
     "Non-native" = "#C96B5C"
   )) +
-  facet_wrap(~ psoc, scales = "free_y") +
+  facet_wrap(~ psoc, scales = "free") +
   labs(
     title = "Selected Species Percent Cover Over Time",
     x = "Year",
