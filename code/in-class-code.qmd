@@ -716,14 +716,13 @@ species_richness_density_plot <- all_species_richness |>
 species_richness_density_plot
 ```
 
-### revision - updated bar plot 
+### REVISION - updated bar plot for all species 
 ```{r}
 
 # combine native and non-native richness data
 all_species_richness <- bind_rows(
   native_species_rich |>
     mutate(type = "Native"),
-  
   invasive_species_rich |>
     mutate(type = "Non-native")
 )
@@ -772,9 +771,9 @@ selected_species_richness <- selected_species_cover |>
             .groups = "drop")
 ```
 
-
+### REVISION - updated bar plot for selected species
 ```{r}
-#| label: alyssa vis-5 density plot focus native non native richness
+#| label: updated bar plot for selected species
 
 # create species richness object for selected species
 selected_species_richness <- selected_species_cover |>
