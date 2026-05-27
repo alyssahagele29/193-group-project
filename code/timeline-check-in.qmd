@@ -34,12 +34,12 @@ In this figure, each line represents the total percent cover of a particular spe
 
 ## Exploratory visualizations
 
-![Figure 3](../images/chosen-specues-richness-distributions.png)
+![Figure 3](../images/chosen-specues-richness-distributionsRV.png)
 In this figure, we compare species richness densities across Native and non-native species groups. These are for the specific key species we chose to analyse. Dispersion for both groups tend to vary across transects. Native species tend to have more than one peak, such as a higher densities at 3-4 native species in transect 12.Non-native species richness tends to have greater spread in transects 2, 10, 11, and 15, but seem to have lower densities on average than native species richness. 
 
 Using a density plot for our chosen species might not be the best indicator of change over time, as this is a smaller group with not enough data to make a confident interpretation of the trends. It can show the distribution of species richness well, however, it does not give us a temporal analysis that we are needing to answer our research question. 
 
-![Figure 4](../images/native-non-native-richness-distributions.png)
+![Figure 4](../images/native-non-native-richness-distributionsRV.png)
 In this figure, we compare species richness densities across Native and non-native species groups for *all* species types that occur in the grassland habitat. Compared to our first density graph, there is a greater range of species richness for this plot (up to 25 species per transect). There is also a significant difference between the shape of each plot for native vs. non-native species richness. On average, native species have peaks of higher densities that occur at low species richness (around 0-10 species occurrences), whereas non-native species have peaks at high species richness (around 10-20 species occurrences). 
 
 Again, a density plot is not able to tell us temporal trends which is significant to answering our research question. However, looking at species richness across all species gives us a better indication of how non-native richness is higher, which could indicate that non-native species presence is higher than native species presence in general.
