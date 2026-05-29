@@ -725,7 +725,7 @@ species_richness_density_plot <- all_species_richness |>
 species_richness_density_plot
 ```
 
-### REVISION - updated bar plot for all species 
+### REVISION - updated bar plot for all species w event
 ```{r}
 
 # combine native and non-native richness data
@@ -735,19 +735,38 @@ all_species_richness <- bind_rows(
   invasive_species_rich |>
     mutate(type = "Non-native")
 )
-
 # summarize species richness by year and type
 species_richness_summary <- all_species_richness |>
   group_by(year, type) |>
-  summarize(total_richness = sum(spp_rich, na.rm = TRUE),
-            .groups = "drop")
-
+  summarize(
+    total_richness = sum(spp_rich, na.rm = TRUE),
+    .groups = "drop"
+  )
 # create stacked bar plot over time
 species_richness_bar_plot <- species_richness_summary |>
   ggplot(aes(x = year,
              y = total_richness,
              fill = type)) +
+  # stacked bars
   geom_col() +
+  # prescribed fire occurred after summer 2023 sampling
+  geom_vline(
+    xintercept = 2023.5,
+    linetype = "dashed",
+    color = "gray50",
+    linewidth = 1
+  ) +
+  # label prescribed fire event
+  annotate(
+    "text",
+    x = 2023.5,
+    y = 184,
+    label = "Prescribed Fire\n(Fall 2023)",
+    angle = 90,
+    vjust = -0.5,
+    size = 3,
+    color = "gray40"
+  ) +
   scale_fill_manual(values = c(
     "Native" = "#4A9782",
     "Non-native" = "#D16D5B"
