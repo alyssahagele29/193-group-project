@@ -15,6 +15,10 @@ format: pdf
 
 ![Figure 3](../images/native-non-native-percover.png)
 
+![Figure 4](../images/barpALL.png)
+![Figure 5](../images/barpSELECTED.png)
+![Figure 6](../images/foursppkey.png)
+
 
 # Discussion 
 

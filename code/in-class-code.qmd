@@ -729,6 +729,9 @@ species_richness_density_plot
 
 ### FINAL REVISION - updated bar plot for all species w event
 ```{r}
+#| fig-width: 7
+#| fig-height: 5
+
 
 # combine native and non-native richness data
 all_species_richness <- bind_rows(
@@ -804,6 +807,9 @@ selected_species_richness <- selected_species_cover |>
 ### FINAL REVISION - updated bar plot for selected species
 ```{r}
 #| label: updated bar plot for selected species
+#| fig-width: 7
+#| fig-height: 5
+
 
 # create species richness object for selected species
 selected_species_richness <- selected_species_cover |>
@@ -1058,7 +1064,7 @@ deinandra_plot <- selected_species_cover |>
   # relabel axes and add title
   labs(
     title = "Deinandra Fasciculata",
-    y = "Mean Percent Cover",
+    y = NULL,
     x = NULL
   ) +
   
@@ -1237,7 +1243,7 @@ polypogon_plot <- selected_species_cover |>
   # relabel axes and add title
   labs(
     title = "Polypogon Monspeliensis",
-    y = "Mean Percent Cover",
+    y = NULL,
     x = "Year"
   ) +
   
@@ -1259,8 +1265,8 @@ polypogon_plot
 ### FINAL plot 4 key spp with events 
 ```{r}
 #| label: focal-species-combined
-#| fig-width: 16
-#| fig-height: 12
+#| fig-width: 10
+#| fig-height: 8
 
 combined_species_plot <-
   ((stipa_plot + deinandra_plot) /
