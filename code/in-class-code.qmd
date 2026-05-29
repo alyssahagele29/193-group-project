@@ -481,6 +481,7 @@ gl_transects <- gl_implicitNA_alyssa |>
 
 ```
 
+### FINAL all pc faceted / transect
 ```{r}
 #| label: alyssa vis-1 faceted native non native pc over time 
 
@@ -527,7 +528,7 @@ selected_species_cover <- gl_implicitNA |>
   )
 ```
 
-
+### FINAL key spp faceted / spp 
 ```{r}
 #| label: alyssa vis-2 faceted species of interest over time ALL (mean pc)
 
@@ -562,6 +563,7 @@ selected_species_cover |>
   theme_bw()
 ```
 
+### wrangling for below 
 ```{r}
 #| label: alyssa vis-3 species richness native non native wrangling
 
@@ -582,7 +584,7 @@ alyssa_species_richness <- gl_implicitNA_alyssa |>
   ungroup()
 ```
 
-### bar plots 
+### FINAL all spp richness faceted / transect
 
 ```{r}
 #| label: alyssa vis-3 species richness native non native boxplot + wrangling
@@ -678,7 +680,7 @@ native_species_rich_plot / invasive_species_rich_plot
 ```
 
 
-### d plot all FINAL 
+### d plot all 
 ```{r}
 #| label: alyssa vis-4 density plot ALL native non native richness
 
@@ -725,7 +727,7 @@ species_richness_density_plot <- all_species_richness |>
 species_richness_density_plot
 ```
 
-### REVISION - updated bar plot for all species w event
+### FINAL REVISION - updated bar plot for all species w event
 ```{r}
 
 # combine native and non-native richness data
@@ -799,7 +801,7 @@ selected_species_richness <- selected_species_cover |>
             .groups = "drop")
 ```
 
-### REVISION - updated bar plot for selected species
+### FINAL REVISION - updated bar plot for selected species
 ```{r}
 #| label: updated bar plot for selected species
 
@@ -865,3 +867,429 @@ selected_species_richness_bar_plot <- selected_species_richness_summary |>
 # display plot
 selected_species_richness_bar_plot
 ```
+
+### ?final? - 4 key spp + fire event 
+
+```{r}
+#| label: key four spp wrangling
+
+# choose four focal species
+four_species <- c("Deinandra_fasciculata",
+                  "Stipa_pulchra",
+                  "Festuca_perennis",
+                  "Polypogon_monspeliensis")
+
+# create object with only the four focal species
+four_species_cover <- selected_species_cover |>
+  filter(psoc %in% four_species) |>
+  group_by(year, psoc, species_group) |>
+  summarize(total_cover = sum(mean_pc, na.rm = TRUE),
+            .groups = "drop")
+```
+
+```{r}
+#| label: stipa-jitter-plot
+
+# Stipa pulchra jitter plot with mean points
+stipa_plot <- selected_species_cover |>
+  
+  # keep only Stipa pulchra
+  filter(psoc == "Stipa_pulchra") |>
+  
+  # create plot
+  ggplot(aes(x = year,
+             y = mean_pc)) +
+  
+  # blue shaded region shows wet 2024 water year
+  annotate(
+    "rect",
+    xmin = 2023.75,
+    xmax = 2024.75,
+    ymin = -Inf,
+    ymax = Inf,
+    fill = "lightblue",
+    alpha = 0.18
+  ) +
+  
+  # individual transect observations
+  geom_jitter(
+    width = 0.10,
+    height = 0,
+    shape = 21,
+    size = 2.5,
+    alpha = 0.55,
+    color = "gray55",
+    fill = "gray80"
+  ) +
+  
+  # yearly mean point
+stat_summary(
+  aes(color = "Native"),
+  fill = "#4A9782", 
+  geom = "point",
+  fun = "mean",
+  shape = 21,
+  size = 5,
+  stroke = 1.2
+) +
+  scale_color_manual(
+  name = "Species Type",
+  values = c(
+    "Native" = "#4A9782",
+    "Non-native" = "#9B5DE5"
+  )
+) +
+  
+  # prescribed fire occurred after summer 2023 sampling
+  geom_vline(
+    xintercept = 2023.5,
+    linetype = "dashed",
+    color = "gray45",
+    linewidth = 0.8
+  ) +
+  
+  # label prescribed fire event
+  annotate(
+    "text",
+    x = 2023.55,
+    y = 50,
+    label = "Prescribed fire\n(Fall 2023)",
+    hjust = 0,
+    vjust = 1,
+    color = "gray35",
+    size = 3.5
+  ) +
+  
+  # show every year on x-axis
+  scale_x_continuous(
+    breaks = 2021:2025
+  ) +
+  
+  # relabel axes and add title
+  labs(
+    title = "Stipa Pulchra",
+    y = "Mean Percent Cover",
+    x = NULL
+  ) +
+  
+  # custom theme
+  theme_bw() +
+  theme(
+    plot.title = element_text(face = "bold",
+                              size = 16),
+    plot.subtitle = element_text(color = "gray35"),
+    axis.title = element_text(size = 12),
+    panel.grid.minor = element_blank()
+  )
+
+# display plot
+stipa_plot
+```
+
+```{r}
+#| label: deinandra-jitter-plot
+
+#| label: deinandra-jitter-plot
+
+# Deinandra fasciculata jitter plot with mean points
+deinandra_plot <- selected_species_cover |>
+  
+  # keep only Deinandra fasciculata
+  filter(psoc == "Deinandra_fasciculata") |>
+  
+  # create plot
+  ggplot(aes(x = year,
+             y = mean_pc)) +
+  
+  # blue shaded region shows wet 2024 water year
+  annotate(
+    "rect",
+    xmin = 2023.75,
+    xmax = 2024.75,
+    ymin = -Inf,
+    ymax = Inf,
+    fill = "lightblue",
+    alpha = 0.18
+  ) +
+  
+  # individual transect observations
+  geom_jitter(
+    width = 0.10,
+    height = 0,
+    shape = 21,
+    size = 2.5,
+    alpha = 0.55,
+    color = "gray55",
+    fill = "gray80"
+  ) +
+  
+  # yearly mean point
+  stat_summary(
+    aes(color = "Native"),
+    fill = "#4A9782",
+    geom = "point",
+    fun = "mean",
+    shape = 21,
+    size = 5,
+    stroke = 1.2
+  ) +
+  
+  scale_color_manual(
+    name = "Species Type",
+    values = c(
+      "Native" = "#4A9782",
+      "Non-native" = "#9B5DE5"
+    )
+  ) +
+  
+  # prescribed fire occurred after summer 2023 sampling
+  geom_vline(
+    xintercept = 2023.5,
+    linetype = "dashed",
+    color = "gray45",
+    linewidth = 0.8
+  ) +
+  
+  # show every year on x-axis
+  scale_x_continuous(
+    breaks = 2021:2025
+  ) +
+  
+  # relabel axes and add title
+  labs(
+    title = "Deinandra Fasciculata",
+    y = "Mean Percent Cover",
+    x = NULL
+  ) +
+  
+  # custom theme
+  theme_bw() +
+  theme(
+    plot.title = element_text(
+      face = "bold",
+      size = 16
+    ),
+    axis.title = element_text(size = 12),
+    panel.grid.minor = element_blank()
+  )
+
+# display plot
+deinandra_plot
+```
+
+```{r}
+#| label: festuca-jitter-plot
+
+
+# Festuca perennis jitter plot with mean points
+festuca_plot <- selected_species_cover |>
+  
+  # keep only Festuca perennis
+  filter(psoc == "Festuca_perennis") |>
+  
+  # create plot
+  ggplot(aes(x = year,
+             y = mean_pc)) +
+  
+  # blue shaded region shows wet 2024 water year
+  annotate(
+    "rect",
+    xmin = 2023.75,
+    xmax = 2024.75,
+    ymin = -Inf,
+    ymax = Inf,
+    fill = "lightblue",
+    alpha = 0.18
+  ) +
+  
+  # individual transect observations
+  geom_jitter(
+    width = 0.10,
+    height = 0,
+    shape = 21,
+    size = 2.5,
+    alpha = 0.55,
+    color = "gray55",
+    fill = "gray80"
+  ) +
+  
+  # yearly mean point
+  stat_summary(
+    aes(color = "Non-native"),
+    fill = "#9B5DE5",
+    geom = "point",
+    fun = "mean",
+    shape = 21,
+    size = 5,
+    stroke = 1.2
+  ) +
+  
+  scale_color_manual(
+    name = "Species Type",
+    values = c(
+      "Native" = "#4A9782",
+      "Non-native" = "#9B5DE5"
+    )
+  ) +
+  
+  # prescribed fire occurred after summer 2023 sampling
+  geom_vline(
+    xintercept = 2023.5,
+    linetype = "dashed",
+    color = "gray45",
+    linewidth = 0.8
+  ) +
+  
+  # show every year on x-axis
+  scale_x_continuous(
+    breaks = 2021:2025
+  ) +
+  
+  # relabel axes and add title
+  labs(
+    title = "Festuca Perennis",
+    y = "Mean Percent Cover",
+    x = "Year"
+  ) +
+  
+  # custom theme
+  theme_bw() +
+  theme(
+    plot.title = element_text(
+      face = "bold",
+      size = 16
+    ),
+    axis.title = element_text(size = 12),
+    panel.grid.minor = element_blank()
+  )
+
+# display plot
+festuca_plot
+```
+
+```{r}
+#| label: polypogon-jitter-plot
+
+# Polypogon monspeliensis jitter plot with mean points
+polypogon_plot <- selected_species_cover |>
+  
+  # keep only Polypogon monspeliensis
+  filter(psoc == "Polypogon_monspeliensis") |>
+  
+  # create plot
+  ggplot(aes(x = year,
+             y = mean_pc)) +
+  
+  # blue shaded region shows wet 2024 water year
+  annotate(
+    "rect",
+    xmin = 2023.75,
+    xmax = 2024.75,
+    ymin = -Inf,
+    ymax = Inf,
+    fill = "lightblue",
+    alpha = 0.18
+  ) +
+  
+  # individual transect observations
+  geom_jitter(
+    width = 0.10,
+    height = 0,
+    shape = 21,
+    size = 2.5,
+    alpha = 0.55,
+    color = "gray55",
+    fill = "gray80"
+  ) +
+  
+  # yearly mean point
+  stat_summary(
+    aes(color = "Non-native"),
+    fill = "#9B5DE5",
+    geom = "point",
+    fun = "mean",
+    shape = 21,
+    size = 5,
+    stroke = 1.2
+  ) +
+  
+  scale_color_manual(
+    name = "Species Type",
+    values = c(
+      "Native" = "#4A9782",
+      "Non-native" = "#9B5DE5"
+    )
+  ) +
+  
+  # prescribed fire occurred after summer 2023 sampling
+  geom_vline(
+    xintercept = 2023.5,
+    linetype = "dashed",
+    color = "gray45",
+    linewidth = 0.8
+  ) +
+  
+  # show every year on x-axis
+  scale_x_continuous(
+    breaks = 2021:2025
+  ) +
+  
+  # relabel axes and add title
+  labs(
+    title = "Polypogon Monspeliensis",
+    y = "Mean Percent Cover",
+    x = "Year"
+  ) +
+  
+  # custom theme
+  theme_bw() +
+  theme(
+    plot.title = element_text(
+      face = "bold",
+      size = 16
+    ),
+    axis.title = element_text(size = 12),
+    panel.grid.minor = element_blank()
+  )
+
+# display plot
+polypogon_plot
+```
+
+### FINAL plot 4 key spp with events 
+```{r}
+#| label: focal-species-combined
+#| fig-width: 16
+#| fig-height: 12
+
+combined_species_plot <-
+  ((stipa_plot + deinandra_plot) /
+   (festuca_plot + polypogon_plot)) +
+  
+  plot_layout(guides = "collect") +
+  
+  plot_annotation(
+    title = "Percent Cover of Four Keys Species Through Time",
+    subtitle = "Blue shading indicates the 2024 water year (143% of normal precipitation).",
+    theme = theme(
+      plot.title = element_text(
+        size = 20,
+        face = "bold",
+        hjust = 0.5
+      ),
+      plot.subtitle = element_text(
+        size = 12,
+        color = "gray35",
+        hjust = 0.5
+      )
+    )
+  ) &
+  
+  theme(
+    legend.position = "bottom"
+  )
+
+# display plot
+combined_species_plot
+```
+
