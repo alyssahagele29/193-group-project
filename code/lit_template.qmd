@@ -25,33 +25,22 @@ We chose to examine the 2025 water year. This water year is relevant to our stud
 
 # Reports or posters
 
-Individually:
-
-1.  Navigate to a. the Posters section or b. the Reports section of the collection.
-2.  Find the poster(s) or report(s) related to your project.
-
-As a group:
-
-3.  Discuss which poster or report to focus on based on its relevance to your study question or context. **Note that you only need one of either type.**
-4.  Read the poster or report.
-5.  Discuss the key insights.
-6.  Provide the information in the space below. For "Key insights" and "Relevance to your study", respond in 3-5 sentences.
-
 ## Report or poster information
 
-Title:
+Title: **Evaluating Sheep Grazing as a Strategy for Restoring the North
+Campus Open Space (NCOS) Grasslands**
 
-Authors:
+Authors: Abby Nestor, Dr. Lisa Stratton, Dr. Carla D'Antonio
 
-Year published:
+Year published: 2025
 
-Permalink:
+Permalink: [click here](https://escholarship.org/uc/item/9jp6r7zs)
 
-Dataset used (likely):
+Data set used (likely): samplimg biomass of native and non-native species of interest, original to the study
 
-Key insights:
+Key insights: This poster wanted to document the effects of sheep grazing as a restoration technique at the NCOS Grasslands. They picked two natives and three non-native species and weighed biomass samples of each species before and after the grazing event. They also observed growth of different plant species from sheep pellets to determine which species would have been consumed most. What they found from their pellet analysis was that grazing decreased biomass of *Medicago polymorpha* overwhelmingly more than any other species, as the sheep preferred nitrogen fixing legumes. The presence of sheep in the open space over time also encouraged native plant growth, as the grasses would flatten to make way for more plants. 
 
-Relevance to your study (be specific here with the question you have asked, the figures you've made, the insights you've gained, etc.):
+Relevance to your study: This poster is relevant to our study because we are considering looking at the different restoration techniques of the open space's grassland, and sheep grazing has been a prominent strategy in recent years. Different events, whether natural or anthopogenic, can influence the growth of different species because they do not respond to these events similarly, nor do the events favor the species equally (e.g., humans dig out invasive species only, sheep prefer to eat nitrogen fixing legumes). Sheep grazing is just one technique that we are interested in considering while we analyze our vegetation data, to see if there are more variables affecting native plant growth than just competition with non-native species.
 
 # Annotated bibliography
 
