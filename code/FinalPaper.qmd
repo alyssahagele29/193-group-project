@@ -9,6 +9,13 @@ format: pdf
 
 # Results 
 
+![Figure 1](../images/species-richness-time.png)
+
+![Figure 2](../images/species-perc-cover-time.png)
+
+![Figure 3](../images/native-non-native-percover.png)
+
+
 # Discussion 
 
 # References 
