@@ -40,7 +40,7 @@ This figure compares *selected* native and non-native species richness over time
 Species richness decreases somewhat between 2021 and 2022, stays fairly similar in 2023, increases in 2024, and then drops again in 2025. Native species richness stays relatively consistent across the years, while non-native species richness makes up a larger portion of the total richness in each year. Compared to the previous density plot, this visualization is more useful for our project because it shows temporal changes more clearly and helps us better evaluate patterns in restoration and shifts in native versus non-native plant communities over time.
 
 ![Figure 4](../images/native-non-native-richness-distributionsRV.png)
-This figure compares native and non-native species richness over time for *all* species observed un the grassland habitat using a stacked bar plot. Across every year, invasive species richness is higher than native species richness, inferring that invasive plants make up a larger portion of the grassland ecosystem throughout observation years.
+This figure compares native and non-native species richness over time for *all* species observed in the grassland habitat using a stacked bar plot. Across every year, invasive species richness is higher than native species richness, inferring that invasive plants make up a larger portion of the grassland ecosystem throughout observation years.
 
 Both native and invasive richness follow similar trends over time. Species richness decreases from 2021 to 2023, increases substantially in 2024, and then declines again in 2025. Although native richness remains substantial across all years, invasive richness consistently contributes the larger share of total richness.
 
