@@ -810,23 +810,43 @@ selected_species_richness <- selected_species_cover |>
   # group by year, transect, and species group
   group_by(year, transect_name, species_group) |>
   # count unique species present
-  summarize(spp_rich = n_distinct(psoc),
-            .groups = "drop")
+  summarize(
+    spp_rich = n_distinct(psoc),
+    .groups = "drop"
+  )
 # summarize richness across years
 selected_species_richness_summary <- selected_species_richness |>
   group_by(year, species_group) |>
-  summarize(total_richness = sum(spp_rich, na.rm = TRUE),
-            .groups = "drop")
-
+  summarize(
+    total_richness = sum(spp_rich, na.rm = TRUE),
+    .groups = "drop"
+  )
 
 # create stacked bar plot
 selected_species_richness_bar_plot <- selected_species_richness_summary |>
-  # create ggplot
   ggplot(aes(x = year,
              y = total_richness,
              fill = species_group)) +
   # create stacked bars
   geom_col() +
+  # prescribed fire occurred after summer 2023 sampling
+  geom_vline(
+    xintercept = 2023.5,
+    linetype = "dashed",
+    color = "gray50",
+    linewidth = 1
+  ) +
+  # label prescribed fire event
+  annotate(
+    "text",
+    x = 2023.5,
+    y = 68,
+    label = "Prescribed Fire\n(Fall 2023)",
+    angle = 90,
+    vjust = -0.5,
+    size = 3,
+    color = "gray40"
+  ) +
   # customize colors
   scale_fill_manual(values = c(
     "Native" = "#4A9782",
@@ -841,6 +861,7 @@ selected_species_richness_bar_plot <- selected_species_richness_summary |>
   ) +
   # black and white theme
   theme_bw()
+
 # display plot
 selected_species_richness_bar_plot
 ```
