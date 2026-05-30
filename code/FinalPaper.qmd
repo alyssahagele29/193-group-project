@@ -1,6 +1,11 @@
 ---
-title: "FinalPaper"
+title: "Final paper"
+author: "Alyssa Hagele, Abby Malech, Henderson Vo"
 format: pdf 
+execute:
+  message: false
+  warning: false
+  echo: false
 ---
 
 # Introduction 
