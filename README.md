@@ -30,7 +30,10 @@ library(patchwork)
 │   ├── timeline-check-in.qmd
 │   ├── in-class-code.pdf                         # class code for data management
 │   ├── in-class-code.qmd
-│   └── FinalPaper.qmd                            # draft for final paper
+│   ├── FinalPaper.qmd                            # draft for final paper
+│   ├── FinalPaper.pdf
+│   ├── lit_template.pdf                          # literature dissection
+│   └── lit_template.qmd 
 ├── data
 │   ├── veg.csv                                   # vegetation survey data
 │   └── vp_veg_metadata.csv                       # transect information
@@ -43,6 +46,8 @@ library(patchwork)
 The rendered document for sample visualizations is [here](https://github.com/alyssahagele29/193-group-project/blob/main/code/in-class-code.pdf).
 
 The rendered document for the timeline check-in is [here](https://github.com/alyssahagele29/193-group-project/blob/main/code/timeline-check-in.pdf).
+
+There rendered document for the literature dissection is [here](https://github.com/alyssahagele29/193-group-project/blob/main/code/lit_template.pdf).
 
 The rendered images for our advanced elective outline is
 ![here](/images/Outside.png)
