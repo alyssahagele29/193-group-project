@@ -14,14 +14,14 @@ format:
 
 | Photo point number | Date of photo    | Season           | Direction of photo | Link to photo    |
 |:-------------------|:-----------------|:-----------------|:-------------------|:-----------------|
-| 14_W_Oct24         | October 24, 2024 | Fall             | West               | [click here](https://ucsb.app.box.com/s/e2r7vg2d0rmfj0aa60m77tlba6bzc035/file/1687215251074)              |
-| 14_W_April2025     | April 14, 2025   | Spring           | West               | [click here](https://ucsb.app.box.com/s/e2r7vg2d0rmfj0aa60m77tlba6bzc035/file/2055665470920)              |
-| 14_NE_Oct24        | October 14, 2024 | Fall             | North East         | [click here](https://ucsb.app.box.com/s/e2r7vg2d0rmfj0aa60m77tlba6bzc035/file/1687217398855)              |
-| 14_NE_April2025    | April 14, 2025   | Spring           | North East         | [click here](https://ucsb.app.box.com/s/e2r7vg2d0rmfj0aa60m77tlba6bzc035/file/2055655076953)              |
+| 14_W_Oct23.jpg         | October 2023 | Fall             | West               | [click here](https://ucsb.app.box.com/s/e2r7vg2d0rmfj0aa60m77tlba6bzc035/file/1355032143787)              |
+| 14_W_Jan24.jpg     | Jan 2025   | Winter           | West               | [click here](https://ucsb.app.box.com/s/e2r7vg2d0rmfj0aa60m77tlba6bzc035/file/1648701621479)              |
+| 14_NE_Oct23.jpg        | October 2023 | Fall             | North East         | [click here](https://ucsb.app.box.com/s/e2r7vg2d0rmfj0aa60m77tlba6bzc035/file/1355014900601)              |
+| 14_NE_Jan24.jpg    | Jan 2025   | Winter           | North East         | [click here](https://ucsb.app.box.com/s/e2r7vg2d0rmfj0aa60m77tlba6bzc035/file/1648707674156)              |
 
 8.  Describe in 5-7 sentences total: 
 
-We chose to examine the 2024 water year. This water year is relevant to our study because the dataset that we are examining (veg) covers years from 2021-2025, so we are looking at recent photos to see what the grassland habitat has transformed into and how that compares to our data. We are also looking at how our visualizations might vary over season (October vs. April). We chose to examine two photo points at spot 22. The first pictures point west and the second set points northeast facing the slough. This photo point is relevant to our study because we want to examine grasslands at a time when a major prescribed fire occurred, as well as a wet water year. We see significant changes in vegetation abundance in April compared to October for both directions. There is higher abundance in April as well as it being greener. This could point to higher numbers of both native and non-native species presence. The northeast photos also show changes in water elevation for the slough, as it is higher in April than in October. 
+We chose to examine the 2024 water year. This water year is relevant to our study because the data set that we are examining (veg) could have changes in species percent cover and richness that could be explained by the influx of rainfall at this time. The pictures also depict that in Fall of 2023 there was a prescribed burn, so we are looking at these photos to see what changed from that Fall to January 2024. We chose to examine two photo points at spot 22. The first pictures point west and the second set points northeast facing the slough. This photo point is relevant to our study because we want to examine grasslands at a time when a major prescribed fire occurred, as well as a wet water year. We see a significant increase in vegetation abundance in January compared to October for both directions. This could point to higher numbers of both native and non-native species presence. The northeast photos also show changes in water elevation for the slough, as it looks slightly higher in January than in October. 
 
 # Reports or posters
 
@@ -40,7 +40,7 @@ Data set used (likely): sampling biomass of native and non-native species of int
 
 Key insights: This poster wanted to document the effects of sheep grazing as a restoration technique at the NCOS Grasslands. They picked two natives and three non-native species and weighed biomass samples of each species before and after the grazing event. They also observed growth of different plant species from sheep pellets to determine which species would have been consumed most. What they found from their pellet analysis was that grazing decreased biomass of *Medicago polymorpha* overwhelmingly more than any other species, as the sheep preferred nitrogen fixing legumes. The presence of sheep in the open space over time also encouraged native plant growth, as the grasses would flatten to make way for more plants. 
 
-Relevance to your study: This poster is relevant to our study because we are considering looking at the different restoration techniques of the open space's grassland, and sheep grazing has been a prominent strategy in recent years. Different events, whether natural or anthopogenic, can influence the growth of different species because they do not respond to these events similarly, nor do the events favor the species equally (e.g., humans dig out invasive species only, sheep prefer to eat nitrogen fixing legumes). Sheep grazing is just one technique that we are interested in considering while we analyze our vegetation data, to see if there are more variables affecting native plant growth than just competition with non-native species.
+Relevance to your study: This poster is relevant to our study because we are considering looking at the different restoration techniques of the open space's grassland, and sheep grazing has been a prominent strategy in recent years. Different events, whether natural or anthropogenic, can influence the growth of different species because they do not respond to these events similarly, nor do the events favor the species equally (e.g., humans dig out invasive species only, sheep prefer to eat nitrogen fixing legumes). Sheep grazing is just one technique that we are interested in considering while we analyze our vegetation data, to see if there are more variables affecting native plant growth than just competition with non-native species.
 
 # Annotated bibliography
 
@@ -73,7 +73,7 @@ As a group:
 
 ### Paper 1
 
-Title: A decade-long study of repeated prescription burning in California native grassland restoration
+Title: **A decade-long study of repeated prescription burning in California native grassland restoration**
 
 Authors: Keeley et al. 
 
@@ -128,7 +128,7 @@ Relevance to study (2-4 sentences): The results of this study are relevant to ou
 
 ### Paper 6
 
-Title: Plant responsiveness to variation in precipitation and nitrogen is consistent across the compositional diversity of a California annual grassland.
+Title: **Plant responsiveness to variation in precipitation and nitrogen is consistent across the compositional diversity of a California annual grassland.**
 
 Authors: St. Clair et al. 
 
@@ -138,7 +138,7 @@ Relevance to study (2-4 sentences): This is relevant to our study because some n
 
 ### Paper 7
 
-Title: Climate seasonality and extremes influence net primary productivity across California’s grasslands, shrublands, and woodlands.
+Title: **Climate seasonality and extremes influence net primary productivity across California’s grasslands, shrublands, and woodlands.**
 
 Authors: Alexander et al. 
 
@@ -149,7 +149,7 @@ Relevance to study (2-4 sentences): This was relevant because NCOS grasslands la
 
 ### Paper 8
 
-Title: Restoration manual for annual grassland systems in California
+Title: **Restoration manual for annual grassland systems in California**
 
 Authors: Gornish & Shaw
 
@@ -181,19 +181,9 @@ Relevance to study (2-4 sentences): This is relevant because it acts as further 
 
 ### Paper 11
 
-Title:
+Title: **California native and exotic perennial grasses differ in their response to soil nitrogen, exotic annual grass density, and order of emergence**
 
-Authors:
-
-Main findings (2-4 sentences):
-
-Relevance to study (2-4 sentences):
-
-### Paper 11
-
-Title:
-
-Authors:
+Authors: Abraham, J.K., Corbin, J.D. & D’Antonio, C.M. 
 
 Main findings (2-4 sentences):
 
