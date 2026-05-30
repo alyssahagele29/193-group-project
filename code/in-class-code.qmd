@@ -531,11 +531,20 @@ selected_species_cover <- gl_implicitNA |>
 ### FINAL key spp faceted / spp 
 ```{r}
 #| label: alyssa vis-2 faceted species of interest over time ALL (mean pc)
+#| fig-width: 10
+#| fig-height: 8
 
 selected_species_cover |>
   group_by(year, psoc, species_group) |>
   summarize(total_cover = sum(mean_pc, na.rm = TRUE)) |>
-  arrange(desc(total_cover)) |> 
+  ungroup() |>
+  mutate(
+    psoc = str_replace_all(psoc, "_", " "),
+    species_group = factor(species_group,
+                           levels = c("Native", "Non-native"))
+  ) |>
+  arrange(species_group, psoc) |>
+  mutate(psoc = factor(psoc, levels = unique(psoc))) |>
   ggplot(aes(x = year,
              y = total_cover,
              color = species_group)) +
@@ -549,18 +558,28 @@ selected_species_cover |>
       linewidth = 0.5
     )
   ) +
-  scale_color_manual(values = c(
-    "Native" = "#4A9782",
-    "Non-native" = "#C96B5C"
-  )) +
-  facet_wrap(~ psoc, scales = "free") +
+  scale_color_manual(
+    breaks = c("Native", "Non-native"),
+    values = c(
+      "Native" = "#4A9782",
+      "Non-native" = "#C96B5C"
+    )
+  ) +
+  facet_wrap(~ psoc, scales = "fixed") +
+  scale_x_continuous(
+    breaks = 2021:2025,
+    expand = expansion(mult = c(0.08, 0.08))
+  ) +
   labs(
     title = "Selected Species Percent Cover Over Time",
     x = "Year",
     y = "Total Percent Cover",
     color = "Species Group"
   ) +
-  theme_bw()
+  theme_bw() +
+  theme(
+    axis.text.x = element_text(size = 8)
+  )
 ```
 
 ### wrangling for below 

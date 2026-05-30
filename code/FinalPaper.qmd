@@ -15,7 +15,7 @@ format: pdf
 
 
 
-![Figure 4](../images/species-perc-cover-time.png)
+![Figure 4](../images/selectedsppfaceted.png)
 
 
 ![Figure 5](../images/native-non-native-percover.png)
