@@ -21,7 +21,7 @@ format:
 
 8.  Describe in 5-7 sentences total:
 
-We chose to examine the 2025 water year. This water year is relevant to our study because the dataset that we are examining (veg) covers years from 2021-2025, so we are looking at recent photos to see what the grassland habitat has transformed into and how that compares to our data. We are also looking at how our visualizations might vary over season (October vs. April). We chose to examine two photo points at spot 22. The first pictures point west and the second set points northeast facing the slough. This photo point is relevant to our study because we want to examine grasslands at a time when a major prescribed fire occurred, as well as a wet water year. We see significant changes in vegetation abundance in April compared to October for both directions. There is higher abundance in April as well as it being greener. This could point to higher numbers of both native and non-native species presence. The northeast photos also show changes in water elevation for the slough, as it is higher in April than in October. 
+We chose to examine the 2024 water year. This water year is relevant to our study because the dataset that we are examining (veg) covers years from 2021-2025, so we are looking at recent photos to see what the grassland habitat has transformed into and how that compares to our data. We are also looking at how our visualizations might vary over season (October vs. April). We chose to examine two photo points at spot 22. The first pictures point west and the second set points northeast facing the slough. This photo point is relevant to our study because we want to examine grasslands at a time when a major prescribed fire occurred, as well as a wet water year. We see significant changes in vegetation abundance in April compared to October for both directions. There is higher abundance in April as well as it being greener. This could point to higher numbers of both native and non-native species presence. The northeast photos also show changes in water elevation for the slough, as it is higher in April than in October. 
 
 # Reports or posters
 
@@ -72,13 +72,13 @@ As a group:
 
 ### Paper 1
 
-Title:
+Title: A decade-long study of repeated prescription burning in California native grassland restoration
 
-Authors:
+Authors: Keeley et al. 
 
-Main findings (2-4 sentences):
+Main findings (2-4 sentences): Concluded that festuca perennis increased in cover post prescribed burns, but had negative trends concerning increased precipitation. Burns had little direct effect on stipa pulchra, but increased in cover due to reduced invasive competition. Bromus hordeaceus experienced a substantial decrease in cover after burns.
 
-Relevance to study (2-4 sentences):
+Relevance to study (2-4 sentences): Festuca perennis has increased at NCOS over time and has the highest mean cover in our dataframe for invasive species. Bromus hordeaceus is also a focus species that is often associated with replacing native grasslands. Lastly, stipa pulchra is a restoration target according to the monitoring report. All three of the species mentioned are one of our ten focus species.
 
 ### Paper 2
 
