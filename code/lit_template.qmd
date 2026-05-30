@@ -136,13 +136,14 @@ Relevance to study (2-4 sentences): This is relevant to our study because some n
 
 ### Paper 7
 
-Title:
+Title: Climate seasonality and extremes influence net primary productivity across California’s grasslands, shrublands, and woodlands.
 
-Authors:
+Authors: Alexander et al. 
 
-Main findings (2-4 sentences):
+Main findings (2-4 sentences): Grasslands were found to show positive responses to water availability extremes; such that NPP (net primary productivity) increased in wet years. Functional diversity was considered an indicator of healthier ecosystems and more stable NPPS. The article also recommended conservation efforts to focus on functional diversity to enhance ecosystem health and resilience. 
 
-Relevance to study (2-4 sentences):
+
+Relevance to study (2-4 sentences): This was relevant because NCOS grasslands lack at least structural diversity so its worth looking into whether it also lacks functional diversity as NCOS grasslands are predominantly annual grasses and some forbs. This was also useful because it concluded that extremely wet years had better NPP than extremely dry years which could help us make some inferences for data after the 2024 water year. 
 
 ### Paper 8
 
