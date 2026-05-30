@@ -174,7 +174,7 @@ Title: **Coexistence and interference between a native perennial grass and non-n
 
 Authors: Hamilton, J., Holzapfel, C. & Mahall, B. 
 
-Main findings (2-4 sentences): Water potential, biomass, and number of seeds for *N. pulchra* (purple needlegrass) are consistently lower when non-native annuals are present in the same plot. These negative effects are due to competition of water, which is the primary limiting resource for *N. pulchra.* Results suggest that persistence of native bunchgrasses may be enhanced by greater mortality of annual than perennial seedlings during drought, and possibly by reduced competition for water in wet years because of increased resource availability.
+Main findings (2-4 sentences): Water potential, biomass, and number of seeds for *Nassella pulchra* (purple needlegrass) are consistently lower when non-native annuals are present in the same plot. These negative effects are due to competition of water, which is the primary limiting resource for *N. pulchra.* Results suggest that persistence of native bunchgrasses may be enhanced by greater mortality of annual than perennial seedlings during drought, and possibly by reduced competition for water in wet years because of increased resource availability.
 
 
 Relevance to study (2-4 sentences): This is relevant because it acts as further evidence to support the idea that the presence of non-native vegetation in NCOS perennial grasslands might cause lower percent cover of native perennial grasses. However, this also allows us to consider major precipitation events in our time series, since competition may not be as heavy following these events. 
@@ -185,19 +185,20 @@ Title: **California native and exotic perennial grasses differ in their response
 
 Authors: Abraham, J.K., Corbin, J.D. & D’Antonio, C.M. 
 
-Main findings (2-4 sentences):
+Main findings (2-4 sentences): Earlier emergence and higher density of non-native annual grass (Bromus diandrus) results in greater reduction of aboveground productivity of perennial grasses. However, the suppressive effect is greater on native perennials compared to non-native perennials. Nitrogen addition also had no effect on native perennial productivity, but greatly increased non-native perennial productivity.
 
-Relevance to study (2-4 sentences):
+Relevance to study (2-4 sentences): These results are relevant considering that one of the non-native vegetation species we are looking at is *Medicago polymorpha*, which is a nitrogen fixer. This could lead to greater non-native perennial productivity, and greater competition from non-native perennial grasses on native grasses. This again could inform annual trends in percent cover, particularly when we facet by species. 
 
 ### Paper 12
 
-Title:
+Title: Structural, compositional and trait differences between native- and non-native-dominated grassland patches
 
-Authors:
+Authors: Molinari, N.A. and D'Antonio, C.M.
 
-Main findings (2-4 sentences):
+Main findings (2-4 sentences): Grassland patches dominated by the exotic annual grass *B. diandrus* differ in physical structure, diversity and trait values when compared to patches dominated by the native perennial grass *N. pulchra*. In particular, grassland patches that were invaded by *B. diandrus* to have fewer species than neighboring uninvaded patches with the most impacted group being native forbs.
 
-Relevance to study (2-4 sentences):
+Relevance to study (2-4 sentences): This is relevant to our question because one of the respone variables we are looking at is species richness. Based on these findings, we should expect areas (like transects) that are dominated by (have the highest percent cover in) non-native grasses to have the lowest species richness. We can facet by transect to explore this.
 
 # References
+
 
