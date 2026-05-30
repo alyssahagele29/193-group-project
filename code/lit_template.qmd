@@ -70,12 +70,8 @@ As a group:
 8. Fill in the template for an annotated bibliography below.
 9. In the "Main findings" or "Relevance to study" sections, insert a citation for the paper.
 
+
 ### Paper 1
-
-<<<<<<< HEAD
-Title: 
-
-Authors: 
 =======
 Title: A decade-long study of repeated prescription burning in California native grassland restoration
 
@@ -130,13 +126,13 @@ Relevance to study (2-4 sentences):
 
 ### Paper 6
 
-Title:
+Title: Plant responsiveness to variation in precipitation and nitrogen is consistent across the compositional diversity of a California annual grassland.
 
-Authors:
+Authors: St. Clair et al. 
 
-Main findings (2-4 sentences):
+Main findings (2-4 sentences): Plant growth and seed production in annual grasslands in California are very responsive to precipitation variation. However, there is a threshold where excess water can reduce biomass productivity similar to the effects of drought In wet years, high nitrogen availability can lead to high productivity, 
 
-Relevance to study (2-4 sentences):
+Relevance to study (2-4 sentences): This is relevant to our study because some non native species of focus are nitrogen fixers so its possible they could be having positive effects on productivity if native plants are able to use the nitrogen/not being outcompeted by non native plants. Furthermore, water year 2024 was extremely wet (143% increase compared to normal years), so this nitrogen may be more usable in wet years. 
 
 ### Paper 7
 
