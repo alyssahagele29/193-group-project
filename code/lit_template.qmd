@@ -201,4 +201,15 @@ Relevance to study (2-4 sentences): This is relevant to our question because one
 
 # References
 
-
+1. Abraham, J.K., Corbin, J.D. & D'Antonio, C.M. (2009). California native and exotic perennial grasses differ in their response to soil nitrogen, exotic annual grass density, and order of emergence. *Plant Ecology*, 201, 445–456. https://doi.org/10.1007/s11258-008-9467-1
+2. Alexander, J. D., McCafferty, M. K., Fricker, G. A., & James, J. J. (2023). Climate seasonality and extremes influence net primary productivity across California's grasslands, shrublands, and woodlands. *Environmental Research Letters*, 18(6), 064021. https://doi.org/10.1088/1748-9326/acd396
+3. Brunson, M. W., Green, K., Welsh, L. W., Endter-Wada, J., & Kettenring, K. M. (2025). Confronting the challenges of wetland restoration in a changing climate: Observations from the U.S. Intermountain West. *Restoration Ecology*, e70317. https://doi.org/10.1111/rec.70317
+4. Buisson, E., & Dutoit, T. (2022). Restoration sites on the Californian coast have different ecological histories that can influence restoration success. *Ecologia Mediterranea*, 48(1), 33–45.
+5. Corbin, J.D., & D'Antonio, C.M. (2010). Not novel, just better: competition between native and non-native plants in California grasslands that share species traits. *Plant Ecology*, 209, 71–81. https://doi.org/10.1007/s11258-010-9722-0
+6. D’Antonio, C.M., Bainbridge, S.J., Kennedy, C.W., Bartolome, J.W., & Reynolds, S.A. (2002). Ecology and Restoration of California Grasslands with special emphasis on the influence of fire and grazing on native grassland species.
+7. Gornish, E. S., & Shaw, J. (2017). Restoration manual for annual grassland systems in California (ANR Publication 8575). University of California Agriculture & Natural Resources. https://doi.org/10.3733/ucanr.8575
+8. Hamilton, J., Holzapfel, C. & Mahall, B. (1999). Coexistence and interference between a native perennial grass and non-native annual grasses in California. *Oecologia*, 121, 518–526. https://doi.org/10.1007/s004420050958
+9. Keeley, J.E., Klinger, R.C., Brennan, T.J., Lawson, D.M., La Grange, J. and Berg, K.N. (2023), A decade-long study of repeated prescription burning in California native grassland restoration. *Restor Ecol*, 31: e13939. https://doi.org/10.1111/rec.13939
+10. Molinari, N.A. & D'Antonio, C.M. (2014). Structural, compositional and trait differences between native- and non-native-dominated grassland patches. *Functional Ecology*, 28, 745–754. https://doi.org/10.1111/1365-2435.12206
+11. Schellenberg, F., Irvine, I. C., Witter, M. S., Nielsen, A. T., & Raulund-Rasmussen, K. (2020). Effects of drought and fire on native Stipa pulchra (Poaceae) recovery in southern California grasslands. *Madroño*, 67(1), 9–18. https://doi.org/10.3120/0024-9637-67.1.9
+12. St. Clair, S. B., Sudderth, E. A., Castanha, C., Torn, M. S., & Ackerly, D. D. (2009). Plant responsiveness to variation in precipitation and nitrogen is consistent across the compositional diversity of a California annual grassland. *Journal of Vegetation Science*, 20(5), 860–870. https://doi.org/10.1111/j.1654-1103.2009.01089.x
