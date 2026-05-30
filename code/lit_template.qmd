@@ -143,15 +143,25 @@ Authors: Alexander et al.
 Main findings (2-4 sentences): Grasslands were found to show positive responses to water availability extremes; such that NPP (net primary productivity) increased in wet years. Functional diversity was considered an indicator of healthier ecosystems and more stable NPPS. The article also recommended conservation efforts to focus on functional diversity to enhance ecosystem health and resilience. 
 
 
-Relevance to study (2-4 sentences): This was relevant because NCOS grasslands lack at least structural diversity so its worth looking into whether it also lacks functional diversity as NCOS grasslands are predominantly annual grasses and some forbs. This was also useful because it concluded that extremely wet years had better NPP than extremely dry years which could help us make some inferences for data after the 2024 water year. 
+Relevance to study (2-4 sentences): This was relevant because NCOS grasslands lack at least structural diversity so its worth looking into whether it also lacks functional diversity as NCOS grasslands are predominantly perennial/annual grasses and some forbs. This was also useful because it concluded that extremely wet years had better NPP than extremely dry years which could help us make some inferences for data after the 2024 water year. 
 
 ### Paper 8
 
-Title:
+Title: Restoration manual for annual grassland systems in California
 
-Authors:
+Authors: Gornish & Shaw
 
-Main findings (2-4 sentences):
+Main findings (2-4 sentences): Annuals establish more quickly after disturbances while perennials (eg Stipa Pulchra) may take longer to establish but provide long term stability. Fire can reduce invasive annual grasses but can promote invasive forbs if not managed carefully. Annuals and shallow rooted species also are more able to establish easier after wet years than perennials.
+
+
+Many native forbs and some grasses (e.g., Stipa pulchra, Distichlis spicata) respond positively to fire or wet years, increasing cover and richness.
+Wet years generally favor higher germination and establishment, especially for annuals and shallow-rooted species
+Stipa pulchra: Cool-season perennial bunchgrass, highly valued native. Tolerant of poor soils, drought, and clay/alkaline/serpentine soils. Strong root system, excellent for erosion control and pollinator habitat.﻿ High survival once established, but slow to mature (3-4 years), low emergence rate, and sensitive to competition from annuals during establishment. Fire intolerant but can benefit from topsoil removal and reduced competition.
+Deinandra fasciculata: Annual forb, tolerant of clay/alkaline soils, drought, and disturbance.﻿ Good for wildlife and pollinators.﻿﻿﻿﻿﻿﻿﻿﻿ Can become weedy and is outcompeted by invasive annuals; deters grazing. Cited as responding well to disturbance.
+Distichlis spicata: Perennial, sod-forming grass, cosmopolitan but prefers wetlands and sandy soils. Highly tolerant of saline/alkaline/clay soils, disturbance, and fire.﻿﻿﻿ Excellent for erosion control and survives well after burns. Good forage for wildlife.﻿﻿﻿﻿
+Percent Cover and Richness: Both are strongly influenced by disturbance (fire, grazing), precipitation, and competition from invasives.﻿ Annuals often dominate after disturbance or in wet years, while perennials increase with time and reduced competition.﻿
+Post-Fire/Wet Year Response: Expect rapid increases in annual species cover and richness post-disturbance, with perennials (like Stipa pulchra, Distichlis spicata) increasing more slowly but providing long-term stability.
+
 
 Relevance to study (2-4 sentences):
 
