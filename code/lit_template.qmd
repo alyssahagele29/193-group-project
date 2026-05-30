@@ -36,7 +36,7 @@ Year published: 2025
 
 Permalink: [click here](https://escholarship.org/uc/item/9jp6r7zs)
 
-Data set used (likely): samplimg biomass of native and non-native species of interest, original to the study
+Data set used (likely): sampling biomass of native and non-native species of interest, original to the study
 
 Key insights: This poster wanted to document the effects of sheep grazing as a restoration technique at the NCOS Grasslands. They picked two natives and three non-native species and weighed biomass samples of each species before and after the grazing event. They also observed growth of different plant species from sheep pellets to determine which species would have been consumed most. What they found from their pellet analysis was that grazing decreased biomass of *Medicago polymorpha* overwhelmingly more than any other species, as the sheep preferred nitrogen fixing legumes. The presence of sheep in the open space over time also encouraged native plant growth, as the grasses would flatten to make way for more plants. 
 
@@ -72,9 +72,9 @@ As a group:
 
 ### Paper 1
 
-Title:
+Title: 
 
-Authors:
+Authors: 
 
 Main findings (2-4 sentences):
 
@@ -82,13 +82,15 @@ Relevance to study (2-4 sentences):
 
 ### Paper 2
 
-Title:
+Title: **Restoration sites on the Californian coast have different ecological histories that can influence restoration success (year)**
 
-Authors:
+Authors: E. Buisson, T. Dutoit
 
-Main findings (2-4 sentences):
+Main findings (2-4 sentences): Changing California landscapes have an effect on future restoration processes. Main ecosystems found before colonization and development in CA were Grasslands and Oak Savannas before they were converted into agricultural land and overgrazed. These have major implications on restoration efforts now with soil degradation, elimination of perennial species, and destroying seed banks vital to germination. A reference ecosystem must then be decided before restoration efforts occurs to "take into account today's needs and uses, future potential changes, and also historical records of what the site was like before degradation" (10).
 
-Relevance to study (2-4 sentences):
+Relevance to study (2-4 sentences): This paper is relevant to our study as the NCOS project is a restoration effort that works toward a goals of bringing the ecosystem back to what it was before major human impact. To do so, the open space uses a reference ecosystem to guide 
+
+
 
 ### Paper 3
 
