@@ -95,33 +95,36 @@ Relevance to study (2-4 sentences): This paper is relevant to our study as the N
 
 ### Paper 3
 
-Title:
+Title: **Confronting the challenges of wetland restoration in a changing climate: observations from the U.S. Intermountain West**
 
-Authors:
 
-Main findings (2-4 sentences):
+Authors: Brunson et al. 
 
-Relevance to study (2-4 sentences):
+Main findings (2-4 sentences): Survey data reported that respondents found there to be more frequent droughts, higher temperatures, changes in timing of water availability, and anticipation of new non-native species growth. Barriers to restoration efforts were mostly operational and regulatory, including difficulty to obtain water, implementation of new seeding practices, and increased efforts to combat invasive species. Restoration is becoming more complex as climate conditions worsen and become more variable. 
+
+Relevance to study (2-4 sentences): We want to mention the difference in percent cover over time before, during, and after the water year to see any major differences. This article can inform us of general opinions of restoration efforts and climate change impacts which may affect the discussion of our results based on our analysis of the 2024 water year specifically. The paper stated that the biggest change for respondents' was the lack of available water, which can influence how restoration managers approach the removal of invasive species, indicating there needs to be more aggressive restoration efforts in the future to allow for native species persistence. 
+
 
 ### Paper 4
 
-Title:
+Title: **EFFECTS OF DROUGHT AND FIRE ON NATIVE STIPA PULCHRA (POACEAE) RECOVERY IN SOUTHERN CALIFORNIA GRASSLANDS**
 
-Authors:
+Authors: Schellenberg et al. 
 
-Main findings (2-4 sentences):
+Main findings (2-4 sentences): The authors analyzed three post-fire results during drought/non-drought conditions of grassland ecosystems in California to assess the impact it had on native perennial grasses and therefore how resilient the species were. They found that two springtime fires had an average mortality rate of 37%, while a fire that occurred in no-drought conditions in the fall was only 6% mortality. Specifically, they observed that "moderate severity burns" within drought conditions, had "decreased survival, re-sprouting, and fecundity of Stipa pulchra.  
 
-Relevance to study (2-4 sentences):
+Relevance to study (2-4 sentences): Stipa pulchra is one of our main key species that we are analyzing for our project. It was also mentioned as one of the species in the monitoring report that had a significant response to the prescribed fire in 2023. Observing pre-conditions of the grassland is just as important as post-fire conditions, as this paper observed that different drought conditions would impact the survival rate of Stipa pulchra. We can observe water conditions from the 2022/23 water years to see if less presence of rainfall impacted the results of the prescribed burn, as in 2024 mean percent cover of Stipa pulchra decreased after the fire event.
 
 ### Paper 5
 
-Title:
+Title: **Ecology and Restoration of California Grasslands with special emphasis on the influence of fire and grazing on native grassland species**
 
-Authors:
+Authors: D'Antonio et al.
 
-Main findings (2-4 sentences):
+Main findings (2-4 sentences): This paper collected information on prescribed fires and livestock grazing as restoration techniques and how impactful they are on restoring native grasslands. The meta-analysis conducted showed that the fires did not result in a direct increase in native vegetation cover, nor consistent decrease in exotic cover, but native vegetation could benefit from these cases. It also depends on the fire frequency and presence of livestock in the region, as "grazing can sustain the positive effects of a single burn". Overall, climate was found to be more impactful than fire.
 
-Relevance to study (2-4 sentences):
+Relevance to study (2-4 sentences): The results of this study are relevant to our analysis because we have an alternate argument that fires do not directly impact vegetation growth, depending on the fire conditions. This will be taken into consideration for our discussion about our figures that include the prescribed burn that occurred in Fall of 2023. 
+
 
 ### Paper 6
 
