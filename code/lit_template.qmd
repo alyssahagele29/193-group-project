@@ -72,11 +72,10 @@ As a group:
 
 
 ### Paper 1
-=======
+
 Title: A decade-long study of repeated prescription burning in California native grassland restoration
 
 Authors: Keeley et al. 
->>>>>>> b6260882cd20aa1f83480e9323978524ca9e6269
 
 Main findings (2-4 sentences): Concluded that festuca perennis increased in cover post prescribed burns, but had negative trends concerning increased precipitation. Burns had little direct effect on stipa pulchra, but increased in cover due to reduced invasive competition. Bromus hordeaceus experienced a substantial decrease in cover after burns.
 
@@ -157,15 +156,26 @@ Relevance to study (2-4 sentences):
 
 ### Paper 9
 
-Title:
+Title: **Not novel, just better: competition between native and non-native plants in California grasslands that share species traits**
 
-Authors:
+Authors: Corbin, J.D., D’Antonio, C.M.
 
-Main findings (2-4 sentences):
+Main findings (2-4 sentences): Competitive interactions between native and non-native perennial grasses consistently favor non-native grasses. Native grass productivity was significantly lower in plots with non-native grasses, yet the productivity of non-native grasses was not reduced by the presence of native grasses. 
 
-Relevance to study (2-4 sentences):
+Relevance to study (2-4 sentences): This is relevant because we are comparing trends in percent cover and species richness between native and non-native grasses. These findings might help to explain a relationship: where measurements for non-native grasses may trend in response to abiotic factors, and measurements for native grasses may respond negatively to those of non-natives in addition to abiotic factors. 
 
 ### Paper 10
+
+Title: **Coexistence and interference between a native perennial grass and non-native annual grasses in California**
+
+Authors: Hamilton, J., Holzapfel, C. & Mahall, B. 
+
+Main findings (2-4 sentences): Water potential, biomass, and number of seeds for *N. pulchra* (purple needlegrass) are consistently lower when non-native annuals are present in the same plot. These negative effects are due to competition of water, which is the primary limiting resource for *N. pulchra.* Results suggest that persistence of native bunchgrasses may be enhanced by greater mortality of annual than perennial seedlings during drought, and possibly by reduced competition for water in wet years because of increased resource availability.
+
+
+Relevance to study (2-4 sentences): This is relevant because it acts as further evidence to support the idea that the presence of non-native vegetation in NCOS perennial grasslands might cause lower percent cover of native perennial grasses. However, this also allows us to consider major precipitation events in our time series, since competition may not be as heavy following these events. 
+
+### Paper 11
 
 Title:
 
