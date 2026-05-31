@@ -15,7 +15,7 @@ The native species purple needlegrass (*Stipa pulchra*) and saltgrass (*Distichl
 
 ## Data analysis
 
-We will not be performing a statistical analysis for our project because we are primarily exploring a correlative relationship rather than predicting trends for species cover and richness. 
+We will not be performing a statistical analysis for our project because we are primarily exploring a correlative relationship rather than predicting trends for species cover and richness. However, we will be identifying major events/time periods that might contextualize or explain any changes. 
 
 ## Literature review
 
