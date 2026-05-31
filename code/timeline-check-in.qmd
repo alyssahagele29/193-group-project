@@ -29,7 +29,7 @@ One journal that we found called ["Restoring wetland prairies: tradeoffs among n
 In this figure, each bar represents the total species richness of a particular year, and each panel represents the temporal trend for each transect. On average, native species richness appears to maintain a similar level over time while non-native species richness appears to have different trends over time depending on the transect. There also appears to consistently be a larger proportion of non-native species to native species in each transect. This answers part of our question of how native species richness has changed over time compared to non-natives: natives stayed the same, and non-natives have spatially varying trends.
 
 
-![Figure 2](../images/species-perc-cover-time.png)
+![Figure 2](../images/selected_meanpc.png)
 In this figure, each line represents the total percent cover of a particular species of vegetation over time (2021-2025), and each panel represents the trend for one species. On average, native vegetation appears to decrease or maintain their level of percent cover over time while non-native vegetation appears to increase or maintain their level of percent cover over time. This answers part of our question of how native vegetation percent cover has changed over time compared to non-natives: natives decreased or stayed the same, and non-natives increased or stayed the same.
 
 ## Exploratory visualizations

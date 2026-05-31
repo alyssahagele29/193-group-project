@@ -582,6 +582,100 @@ selected_species_cover |>
   )
 ```
 
+```{r}
+#| label: abby revised vis-2 faceted species of interest over time ALL
+#| fig-width: 10
+#| fig-height: 8
+
+# NATIVE
+selected_pc_native = selected_species_cover |>
+  group_by(year, psoc, species_group) |>
+  filter(species_group == "Native") |> 
+  summarize(total_cover = sum(mean_pc, na.rm = TRUE)) |>
+  ungroup() |>
+  mutate(psoc = str_replace_all(psoc, "_", " ")) |> 
+  arrange(desc(total_cover)) |>
+  mutate(psoc = factor(psoc, levels = unique(psoc))) |>
+  ggplot(aes(x = year,
+             y = total_cover,
+             color = species_group)) +
+  geom_line(aes(group = psoc),
+            linewidth = 1.2) +
+  gghighlight(
+    use_direct_label = FALSE,
+    unhighlighted_params = list(
+      color = "gray70",
+      alpha = 0.6,
+      linewidth = 0.5
+    )
+  ) +
+  scale_color_manual(
+    breaks = c("Native"),
+    values = c(
+      "Native" = "#4A9782"
+    )
+  ) +
+  facet_wrap(~ psoc, scales = "free") +
+  scale_x_continuous(
+    breaks = 2021:2025,
+    expand = expansion(mult = c(0.08, 0.08))
+  ) +
+  labs(
+    title = "Selected Native Species Percent Cover Over Time",
+    x = "Year",
+    y = "Total Percent Cover",
+    color = "Species Group"
+  ) +
+  theme_bw() + 
+  theme(axis.text.x = element_text(size = 8)) +
+  theme(legend.position = "none")
+
+# NON-NATIVE
+selected_pc_nonnative = selected_species_cover |>
+  group_by(year, psoc, species_group) |>
+  filter(species_group == "Non-native") |> 
+  summarize(total_cover = sum(mean_pc, na.rm = TRUE)) |>
+  ungroup() |>
+  mutate(psoc = str_replace_all(psoc, "_", " ")) |> 
+  arrange(desc(total_cover)) |>
+  mutate(psoc = factor(psoc, levels = unique(psoc))) |>
+  ggplot(aes(x = year,
+             y = total_cover,
+             color = species_group)) +
+  geom_line(aes(group = psoc),
+            linewidth = 1.2) +
+  gghighlight(
+    use_direct_label = FALSE,
+    unhighlighted_params = list(
+      color = "gray70",
+      alpha = 0.6,
+      linewidth = 0.5
+    )
+  ) +
+  scale_color_manual(
+    breaks = c("Non-native"),
+    values = c(
+      "Non-native" = "#C96B5C"
+    )
+  ) +
+  facet_wrap(~ psoc, scales = "free") +
+  scale_x_continuous(
+    breaks = 2021:2025,
+    expand = expansion(mult = c(0.08, 0.08))
+  ) +
+  labs(
+    title = "Selected Non-native Species Percent Cover Over Time",
+    x = "Year",
+    y = "Total Percent Cover",
+    color = "Species Group"
+  ) +
+  theme_bw() + 
+  theme(axis.text.x = element_text(size = 8)) + 
+  theme(legend.position = "none")
+
+selected_pc_native/selected_pc_nonnative
+```
+
 ### wrangling for below 
 ```{r}
 #| label: alyssa vis-3 species richness native non native wrangling
