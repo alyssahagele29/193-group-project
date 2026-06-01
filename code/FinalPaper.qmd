@@ -20,10 +20,10 @@ execute:
 
 
 
-![Figure 4](../images/selectedsppfaceted.png)
+![Figure 4](../images/selected_meanpc_UPDATED.png)
 
 
-![Figure 5](../images/native-non-native-percover.png)
+![Figure 5](../images/perc_cover_GLtransects.png)
 
 
 ![Figure 6](../images/foursppkey.png)

@@ -506,15 +506,6 @@ gl_transects |>
   theme_bw()
 ```
 
-```{r}
-
-
-
-
-
-
-```
-
 ### non native and native species of interest over time FACETED by species
 ```{r}
 #| label: alyssa wrangling for vis 2 
@@ -618,7 +609,7 @@ selected_pc_native = selected_species_cover |>
       "Native" = "#4A9782"
     )
   ) +
-  facet_wrap(~ psoc, scales = "free") +
+  facet_wrap(~ psoc, scales = "free", nrow = 1) +
   scale_x_continuous(
     breaks = 2021:2025,
     expand = expansion(mult = c(0.08, 0.08))
@@ -661,7 +652,7 @@ selected_pc_nonnative = selected_species_cover |>
       "Non-native" = "#C96B5C"
     )
   ) +
-  facet_wrap(~ psoc, scales = "free") +
+  facet_wrap(~ psoc, scales = "free", nrow = 1) +
   scale_x_continuous(
     breaks = 2021:2025,
     expand = expansion(mult = c(0.08, 0.08))
