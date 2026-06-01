@@ -493,13 +493,16 @@ gl_transects |>
              color = cover_category)) +
   geom_line() +
   geom_point() +
-  facet_wrap(~ transect_name) +
+  facet_wrap(~ transect_name, scales = "free_x") +
   labs(
     title = "Native vs Non-Native Percent Cover Over Time Across GL Transects",
     x = "Year",
     y = "Total Percent Cover",
     color = "Cover Category"
   ) +
+  scale_color_manual(
+    values = c("NON-NATIVE COVER" = "#C96B5C",
+               "NATIVE COVER" = "#4A9782")) +
   theme_bw()
 ```
 
