@@ -525,7 +525,7 @@ selected_species_cover <- gl_implicitNA |>
 ### FINAL key spp faceted / spp 
 ```{r}
 #| label: alyssa vis-2 faceted species of interest over time ALL (mean pc)
-#| fig-width: 10
+#| fig-width: 14
 #| fig-height: 8
 
 selected_species_cover |>
@@ -578,8 +578,8 @@ selected_species_cover |>
 
 ```{r}
 #| label: abby revised vis-2 faceted species of interest over time ALL
-#| fig-width: 10
-#| fig-height: 8
+#| fig-width: 20
+#| fig-height: 14
 
 # NATIVE
 selected_pc_native = selected_species_cover |>
@@ -609,7 +609,7 @@ selected_pc_native = selected_species_cover |>
       "Native" = "#4A9782"
     )
   ) +
-  facet_wrap(~ psoc, scales = "free", nrow = 1) +
+  facet_wrap(~ psoc, scales = "free_x", nrow = 1) +
   scale_x_continuous(
     breaks = 2021:2025,
     expand = expansion(mult = c(0.08, 0.08))
@@ -652,7 +652,7 @@ selected_pc_nonnative = selected_species_cover |>
       "Non-native" = "#C96B5C"
     )
   ) +
-  facet_wrap(~ psoc, scales = "free", nrow = 1) +
+  facet_wrap(~ psoc, scales = "free_x", nrow = 1) +
   scale_x_continuous(
     breaks = 2021:2025,
     expand = expansion(mult = c(0.08, 0.08))
@@ -974,6 +974,8 @@ selected_species_richness_bar_plot <- selected_species_richness_summary |>
     y = "Species Richness",
     fill = "Species Group"
   ) +
+  scale_y_continuous(expand = c(0, 0),
+                     limits = c(0, 80)) +
   # black and white theme
   theme_bw()
 
