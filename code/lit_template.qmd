@@ -6,29 +6,29 @@ date: "05-29-2026"
 format: 
   pdf:
     toc: true
+bibliography: references.bib
 ---
 
 # Photo documentation
 
 ## Table
 
-| Photo point number | Date of photo    | Season           | Direction of photo | Link to photo    |
-|:-------------------|:-----------------|:-----------------|:-------------------|:-----------------|
-| 14_W_Oct23.jpg         | October 2023 | Fall             | West               | [click here](https://ucsb.app.box.com/s/e2r7vg2d0rmfj0aa60m77tlba6bzc035/file/1355032143787)              |
-| 14_W_Jan24.jpg     | Jan 2025   | Winter           | West               | [click here](https://ucsb.app.box.com/s/e2r7vg2d0rmfj0aa60m77tlba6bzc035/file/1648701621479)              |
-| 14_NE_Oct23.jpg        | October 2023 | Fall             | North East         | [click here](https://ucsb.app.box.com/s/e2r7vg2d0rmfj0aa60m77tlba6bzc035/file/1355014900601)              |
-| 14_NE_Jan24.jpg    | Jan 2025   | Winter           | North East         | [click here](https://ucsb.app.box.com/s/e2r7vg2d0rmfj0aa60m77tlba6bzc035/file/1648707674156)              |
+| Photo point number | Date of photo | Season | Direction of photo | Link to photo |
+|:--------------|:--------------|:--------------|:--------------|:--------------|
+| 14_W_Oct23.jpg | October 2023 | Fall | West | [click here](https://ucsb.app.box.com/s/e2r7vg2d0rmfj0aa60m77tlba6bzc035/file/1355032143787) |
+| 14_W_Jan24.jpg | Jan 2025 | Winter | West | [click here](https://ucsb.app.box.com/s/e2r7vg2d0rmfj0aa60m77tlba6bzc035/file/1648701621479) |
+| 14_NE_Oct23.jpg | October 2023 | Fall | North East | [click here](https://ucsb.app.box.com/s/e2r7vg2d0rmfj0aa60m77tlba6bzc035/file/1355014900601) |
+| 14_NE_Jan24.jpg | Jan 2025 | Winter | North East | [click here](https://ucsb.app.box.com/s/e2r7vg2d0rmfj0aa60m77tlba6bzc035/file/1648707674156) |
 
-8.  Describe in 5-7 sentences total: 
+8.  Describe in 5-7 sentences total:
 
-We chose to examine the 2024 water year. This water year is relevant to our study because the data set that we are examining (veg) could have changes in species percent cover and richness that could be explained by the influx of rainfall at this time. The pictures also depict that in Fall of 2023 there was a prescribed burn, so we are looking at these photos to see what changed from that Fall to January 2024. We chose to examine two photo points at spot 22. The first pictures point west and the second set points northeast facing the slough. This photo point is relevant to our study because we want to examine grasslands at a time when a major prescribed fire occurred, as well as a wet water year. We see a significant increase in vegetation abundance in January compared to October for both directions. This could point to higher numbers of both native and non-native species presence. The northeast photos also show changes in water elevation for the slough, as it looks slightly higher in January than in October. 
+We chose to examine the 2024 water year. This water year is relevant to our study because the data set that we are examining (veg) could have changes in species percent cover and richness that could be explained by the influx of rainfall at this time. The pictures also depict that in Fall of 2023 there was a prescribed burn, so we are looking at these photos to see what changed from that Fall to January 2024. We chose to examine two photo points at spot 22. The first pictures point west and the second set points northeast facing the slough. This photo point is relevant to our study because we want to examine grasslands at a time when a major prescribed fire occurred, as well as a wet water year. We see a significant increase in vegetation abundance in January compared to October for both directions. This could point to higher numbers of both native and non-native species presence. The northeast photos also show changes in water elevation for the slough, as it looks slightly higher in January than in October.
 
 # Reports or posters
 
 ## Report or poster information
 
-Title: **Evaluating Sheep Grazing as a Strategy for Restoring the North
-Campus Open Space (NCOS) Grasslands**
+Title: **Evaluating Sheep Grazing as a Strategy for Restoring the North Campus Open Space (NCOS) Grasslands**
 
 Authors: Abby Nestor, Dr. Lisa Stratton, Dr. Carla D'Antonio
 
@@ -38,7 +38,7 @@ Permalink: [click here](https://escholarship.org/uc/item/9jp6r7zs)
 
 Data set used (likely): sampling biomass of native and non-native species of interest, original to the study
 
-Key insights: This poster wanted to document the effects of sheep grazing as a restoration technique at the NCOS Grasslands. They picked two natives and three non-native species and weighed biomass samples of each species before and after the grazing event. They also observed growth of different plant species from sheep pellets to determine which species would have been consumed most. What they found from their pellet analysis was that grazing decreased biomass of *Medicago polymorpha* overwhelmingly more than any other species, as the sheep preferred nitrogen fixing legumes. The presence of sheep in the open space over time also encouraged native plant growth, as the grasses would flatten to make way for more plants. 
+Key insights: This poster wanted to document the effects of sheep grazing as a restoration technique at the NCOS Grasslands. They picked two natives and three non-native species and weighed biomass samples of each species before and after the grazing event. They also observed growth of different plant species from sheep pellets to determine which species would have been consumed most. What they found from their pellet analysis was that grazing decreased biomass of *Medicago polymorpha* overwhelmingly more than any other species, as the sheep preferred nitrogen fixing legumes. The presence of sheep in the open space over time also encouraged native plant growth, as the grasses would flatten to make way for more plants.
 
 Relevance to your study: This poster is relevant to our study because we are considering looking at the different restoration techniques of the open space's grassland, and sheep grazing has been a prominent strategy in recent years. Different events, whether natural or anthropogenic, can influence the growth of different species because they do not respond to these events similarly, nor do the events favor the species equally (e.g., humans dig out invasive species only, sheep prefer to eat nitrogen fixing legumes). Sheep grazing is just one technique that we are interested in considering while we analyze our vegetation data, to see if there are more variables affecting native plant growth than just competition with non-native species.
 
@@ -48,7 +48,7 @@ Relevance to your study: This poster is relevant to our study because we are con
 
 You can find peer-reviewed articles by searching on Google Scholar, which is a large database of research papers, posters, and other materials.
 
-Note: while it may be tempting to use AI to provide a list of papers for you, you should _not_ be using AI for any component of this activity. You'll accomplish the objective of articulating the connection between your study and other study systems/questions by completing the difficult task of sifting through papers that may not be relevant to you before finding one that is.
+Note: while it may be tempting to use AI to provide a list of papers for you, you should *not* be using AI for any component of this activity. You'll accomplish the objective of articulating the connection between your study and other study systems/questions by completing the difficult task of sifting through papers that may not be relevant to you before finding one that is.
 
 Additionally, you can test out inserting citations in Quarto. See [this resource to insert a citation in a .qmd](https://envs-193dd.github.io/resources/adding-citations.html).
 
@@ -56,26 +56,24 @@ Additionally, you can test out inserting citations in Quarto. See [this resource
 
 Individually:
 
-1. Search Google Scholar for papers that might be relevant to your study. One recommendation for how to start: search for whatever your focal variables may be + "wetland restoration" (for example, "bird abundance wetland restoration", "water salinity wetland restoration", "aquatic invertebrate wetland restoration").
-2. Find 4-5 papers that might be relevant based on title and what shows up in the search.
-3. Read the abstracts of those 4-5 papers.
-4. Decide which - if any - are actually relevant to your project. Make a note of these papers.
-   Note that a paper may be relevant in that it shares a) taxonomic groups, b) geographic regions, c) research questions, d) research methodology - there are lots of ways that existing research can be tied into your project.
-5. If step 4 did not yield any relevant papers, repeat steps 2-4.
-6. Search for papers until you have 4 relevant papers per person (12 total for a 3 person group).
+1.  Search Google Scholar for papers that might be relevant to your study. One recommendation for how to start: search for whatever your focal variables may be + "wetland restoration" (for example, "bird abundance wetland restoration", "water salinity wetland restoration", "aquatic invertebrate wetland restoration").
+2.  Find 4-5 papers that might be relevant based on title and what shows up in the search.
+3.  Read the abstracts of those 4-5 papers.
+4.  Decide which - if any - are actually relevant to your project. Make a note of these papers. Note that a paper may be relevant in that it shares a) taxonomic groups, b) geographic regions, c) research questions, d) research methodology - there are lots of ways that existing research can be tied into your project.
+5.  If step 4 did not yield any relevant papers, repeat steps 2-4.
+6.  Search for papers until you have 4 relevant papers per person (12 total for a 3 person group).
 
 As a group:
 
-7. Share the papers you found, discussing the main points of the paper and how they are relevant to your project.
-8. Fill in the template for an annotated bibliography below.
-9. In the "Main findings" or "Relevance to study" sections, insert a citation for the paper.
-
+7.  Share the papers you found, discussing the main points of the paper and how they are relevant to your project.
+8.  Fill in the template for an annotated bibliography below.
+9.  In the "Main findings" or "Relevance to study" sections, insert a citation for the paper.
 
 ### Paper 1
 
 Title: **A decade-long study of repeated prescription burning in California native grassland restoration**
 
-Authors: Keeley et al. 
+Authors: Keeley et al.
 
 Main findings (2-4 sentences): Concluded that festuca perennis increased in cover post prescribed burns, but had negative trends concerning increased precipitation. Burns had little direct effect on stipa pulchra, but increased in cover due to reduced invasive competition. Bromus hordeaceus experienced a substantial decrease in cover after burns.
 
@@ -89,29 +87,25 @@ Authors: E. Buisson, T. Dutoit
 
 Main findings (2-4 sentences): Changing California landscapes have an effect on future restoration processes. Main ecosystems found before colonization and development in CA were Grasslands and Oak Savannas before they were converted into agricultural land and overgrazed. These have major implications on restoration efforts now with soil degradation, elimination of perennial species, and destroying seed banks vital to germination. A reference ecosystem must then be decided before restoration efforts occurs to "take into account today's needs and uses, future potential changes, and also historical records of what the site was like before degradation" (10).
 
-Relevance to study (2-4 sentences): This paper is relevant to our study as the NCOS project is a restoration effort that works toward a goals of bringing the ecosystem back to what it was before major human impact. To do so, the open space uses a reference ecosystem to guide 
-
-
+Relevance to study (2-4 sentences): This paper is relevant to our study as the NCOS project is a restoration effort that works toward a goals of bringing the ecosystem back to what it was before major human impact. To do so, the open space uses a reference ecosystem to guide
 
 ### Paper 3
 
 Title: **Confronting the challenges of wetland restoration in a changing climate: observations from the U.S. Intermountain West**
 
+Authors: Brunson et al.
 
-Authors: Brunson et al. 
+Main findings (2-4 sentences): Survey data reported that respondents found there to be more frequent droughts, higher temperatures, changes in timing of water availability, and anticipation of new non-native species growth. Barriers to restoration efforts were mostly operational and regulatory, including difficulty to obtain water, implementation of new seeding practices, and increased efforts to combat invasive species. Restoration is becoming more complex as climate conditions worsen and become more variable.
 
-Main findings (2-4 sentences): Survey data reported that respondents found there to be more frequent droughts, higher temperatures, changes in timing of water availability, and anticipation of new non-native species growth. Barriers to restoration efforts were mostly operational and regulatory, including difficulty to obtain water, implementation of new seeding practices, and increased efforts to combat invasive species. Restoration is becoming more complex as climate conditions worsen and become more variable. 
-
-Relevance to study (2-4 sentences): We want to mention the difference in percent cover over time before, during, and after the water year to see any major differences. This article can inform us of general opinions of restoration efforts and climate change impacts which may affect the discussion of our results based on our analysis of the 2024 water year specifically. The paper stated that the biggest change for respondents' was the lack of available water, which can influence how restoration managers approach the removal of invasive species, indicating there needs to be more aggressive restoration efforts in the future to allow for native species persistence. 
-
+Relevance to study (2-4 sentences): We want to mention the difference in percent cover over time before, during, and after the water year to see any major differences. This article can inform us of general opinions of restoration efforts and climate change impacts which may affect the discussion of our results based on our analysis of the 2024 water year specifically. The paper stated that the biggest change for respondents' was the lack of available water, which can influence how restoration managers approach the removal of invasive species, indicating there needs to be more aggressive restoration efforts in the future to allow for native species persistence.
 
 ### Paper 4
 
 Title: **EFFECTS OF DROUGHT AND FIRE ON NATIVE STIPA PULCHRA (POACEAE) RECOVERY IN SOUTHERN CALIFORNIA GRASSLANDS**
 
-Authors: Schellenberg et al. 
+Authors: Schellenberg et al.
 
-Main findings (2-4 sentences): The authors analyzed three post-fire results during drought/non-drought conditions of grassland ecosystems in California to assess the impact it had on native perennial grasses and therefore how resilient the species were. They found that two springtime fires had an average mortality rate of 37%, while a fire that occurred in no-drought conditions in the fall was only 6% mortality. Specifically, they observed that "moderate severity burns" within drought conditions, had "decreased survival, re-sprouting, and fecundity of Stipa pulchra.  
+Main findings (2-4 sentences): The authors analyzed three post-fire results during drought/non-drought conditions of grassland ecosystems in California to assess the impact it had on native perennial grasses and therefore how resilient the species were. They found that two springtime fires had an average mortality rate of 37%, while a fire that occurred in no-drought conditions in the fall was only 6% mortality. Specifically, they observed that "moderate severity burns" within drought conditions, had "decreased survival, re-sprouting, and fecundity of Stipa pulchra.
 
 Relevance to study (2-4 sentences): Stipa pulchra is one of our main key species that we are analyzing for our project. It was also mentioned as one of the species in the monitoring report that had a significant response to the prescribed fire in 2023. Observing pre-conditions of the grassland is just as important as post-fire conditions, as this paper observed that different drought conditions would impact the survival rate of Stipa pulchra. We can observe water conditions from the 2022/23 water years to see if less presence of rainfall impacted the results of the prescribed burn, as in 2024 mean percent cover of Stipa pulchra decreased after the fire event.
 
@@ -123,29 +117,27 @@ Authors: D'Antonio et al.
 
 Main findings (2-4 sentences): This paper collected information on prescribed fires and livestock grazing as restoration techniques and how impactful they are on restoring native grasslands. The meta-analysis conducted showed that the fires did not result in a direct increase in native vegetation cover, nor consistent decrease in exotic cover, but native vegetation could benefit from these cases. It also depends on the fire frequency and presence of livestock in the region, as "grazing can sustain the positive effects of a single burn". Overall, climate was found to be more impactful than fire.
 
-Relevance to study (2-4 sentences): The results of this study are relevant to our analysis because we have an alternate argument that fires do not directly impact vegetation growth, depending on the fire conditions. This will be taken into consideration for our discussion about our figures that include the prescribed burn that occurred in Fall of 2023. 
-
+Relevance to study (2-4 sentences): The results of this study are relevant to our analysis because we have an alternate argument that fires do not directly impact vegetation growth, depending on the fire conditions. This will be taken into consideration for our discussion about our figures that include the prescribed burn that occurred in Fall of 2023.
 
 ### Paper 6
 
 Title: **Plant responsiveness to variation in precipitation and nitrogen is consistent across the compositional diversity of a California annual grassland.**
 
-Authors: St. Clair et al. 
+Authors: St. Clair et al.
 
-Main findings (2-4 sentences): Plant growth and seed production in annual grasslands in California are very responsive to precipitation variation. However, there is a threshold where excess water can reduce biomass productivity similar to the effects of drought In wet years, high nitrogen availability can lead to high productivity, 
+Main findings (2-4 sentences): Plant growth and seed production in annual grasslands in California are very responsive to precipitation variation. However, there is a threshold where excess water can reduce biomass productivity similar to the effects of drought In wet years, high nitrogen availability can lead to high productivity,
 
-Relevance to study (2-4 sentences): This is relevant to our study because some non native species of focus are nitrogen fixers so its possible they could be having positive effects on productivity if native plants are able to use the nitrogen/not being outcompeted by non native plants. Furthermore, water year 2024 was extremely wet (143% increase compared to normal years), so this nitrogen may be more usable in wet years. 
+Relevance to study (2-4 sentences): This is relevant to our study because some non native species of focus are nitrogen fixers so its possible they could be having positive effects on productivity if native plants are able to use the nitrogen/not being outcompeted by non native plants. Furthermore, water year 2024 was extremely wet (143% increase compared to normal years), so this nitrogen may be more usable in wet years.
 
 ### Paper 7
 
 Title: **Climate seasonality and extremes influence net primary productivity across California’s grasslands, shrublands, and woodlands.**
 
-Authors: Alexander et al. 
+Authors: Alexander et al.
 
-Main findings (2-4 sentences): Grasslands were found to show positive responses to water availability extremes; such that NPP (net primary productivity) increased in wet years. Functional diversity was considered an indicator of healthier ecosystems and more stable NPPS. The article also recommended conservation efforts to focus on functional diversity to enhance ecosystem health and resilience. 
+Main findings (2-4 sentences): Grasslands were found to show positive responses to water availability extremes; such that NPP (net primary productivity) increased in wet years. Functional diversity was considered an indicator of healthier ecosystems and more stable NPPS. The article also recommended conservation efforts to focus on functional diversity to enhance ecosystem health and resilience.
 
-
-Relevance to study (2-4 sentences): This was relevant because NCOS grasslands lack at least structural diversity so its worth looking into whether it also lacks functional diversity as NCOS grasslands are predominantly perennial/annual grasses and some forbs. This was also useful because it concluded that extremely wet years had better NPP than extremely dry years which could help us make some inferences for data after the 2024 water year. 
+Relevance to study (2-4 sentences): This was relevant because NCOS grasslands lack at least structural diversity so its worth looking into whether it also lacks functional diversity as NCOS grasslands are predominantly perennial/annual grasses and some forbs. This was also useful because it concluded that extremely wet years had better NPP than extremely dry years which could help us make some inferences for data after the 2024 water year.
 
 ### Paper 8
 
@@ -155,8 +147,7 @@ Authors: Gornish & Shaw
 
 Main findings (2-4 sentences): Annuals establish more quickly after disturbances while perennials (eg Stipa Pulchra) may take longer to establish but provide long term stability. Fire can reduce invasive annual grasses but can promote invasive forbs if not managed carefully. Annuals and shallow rooted species also are more able to establish easier after wet years than perennials. Deinandra fasciculata is an annual forb but is can become weedy and outcompeted by annuals, but it is cited to respond well to disturbances.
 
-
-Relevance to study (2-4 sentences): This is relevant because many of our native perennial grasses didn't do as well as expected post prescribed burn of 2023 nor with a wet water year (2024). But this could possibly be explained by the fact that annual grasses are just dominating the landscape after disturbances and perennial species are taking a while to establish. 
+Relevance to study (2-4 sentences): This is relevant because many of our native perennial grasses didn't do as well as expected post prescribed burn of 2023 nor with a wet water year (2024). But this could possibly be explained by the fact that annual grasses are just dominating the landscape after disturbances and perennial species are taking a while to establish.
 
 ### Paper 9
 
@@ -164,30 +155,29 @@ Title: **Not novel, just better: competition between native and non-native plant
 
 Authors: Corbin, J.D., D’Antonio, C.M.
 
-Main findings (2-4 sentences): Competitive interactions between native and non-native perennial grasses consistently favor non-native grasses. Native grass productivity was significantly lower in plots with non-native grasses, yet the productivity of non-native grasses was not reduced by the presence of native grasses. 
+Main findings (2-4 sentences): Competitive interactions between native and non-native perennial grasses consistently favor non-native grasses. Native grass productivity was significantly lower in plots with non-native grasses, yet the productivity of non-native grasses was not reduced by the presence of native grasses.
 
-Relevance to study (2-4 sentences): This is relevant because we are comparing trends in percent cover and species richness between native and non-native grasses. These findings might help to explain a relationship: where measurements for non-native grasses may trend in response to abiotic factors, and measurements for native grasses may respond negatively to those of non-natives in addition to abiotic factors. 
+Relevance to study (2-4 sentences): This is relevant because we are comparing trends in percent cover and species richness between native and non-native grasses. These findings might help to explain a relationship: where measurements for non-native grasses may trend in response to abiotic factors, and measurements for native grasses may respond negatively to those of non-natives in addition to abiotic factors.
 
 ### Paper 10
 
 Title: **Coexistence and interference between a native perennial grass and non-native annual grasses in California**
 
-Authors: Hamilton, J., Holzapfel, C. & Mahall, B. 
+Authors: Hamilton, J., Holzapfel, C. & Mahall, B.
 
 Main findings (2-4 sentences): Water potential, biomass, and number of seeds for *Nassella pulchra* (purple needlegrass) are consistently lower when non-native annuals are present in the same plot. These negative effects are due to competition of water, which is the primary limiting resource for *N. pulchra.* Results suggest that persistence of native bunchgrasses may be enhanced by greater mortality of annual than perennial seedlings during drought, and possibly by reduced competition for water in wet years because of increased resource availability.
 
-
-Relevance to study (2-4 sentences): This is relevant because it acts as further evidence to support the idea that the presence of non-native vegetation in NCOS perennial grasslands might cause lower percent cover of native perennial grasses. However, this also allows us to consider major precipitation events in our time series, since competition may not be as heavy following these events. 
+Relevance to study (2-4 sentences): This is relevant because it acts as further evidence to support the idea that the presence of non-native vegetation in NCOS perennial grasslands might cause lower percent cover of native perennial grasses. However, this also allows us to consider major precipitation events in our time series, since competition may not be as heavy following these events.
 
 ### Paper 11
 
 Title: **California native and exotic perennial grasses differ in their response to soil nitrogen, exotic annual grass density, and order of emergence**
 
-Authors: Abraham, J.K., Corbin, J.D. & D’Antonio, C.M. 
+Authors: Abraham, J.K., Corbin, J.D. & D’Antonio, C.M.
 
 Main findings (2-4 sentences): Earlier emergence and higher density of non-native annual grass (Bromus diandrus) results in greater reduction of aboveground productivity of perennial grasses. However, the suppressive effect is greater on native perennials compared to non-native perennials. Nitrogen addition also had no effect on native perennial productivity, but greatly increased non-native perennial productivity.
 
-Relevance to study (2-4 sentences): These results are relevant considering that one of the non-native vegetation species we are looking at is *Medicago polymorpha*, which is a nitrogen fixer. This could lead to greater non-native perennial productivity, and greater competition from non-native perennial grasses on native grasses. This again could inform annual trends in percent cover, particularly when we facet by species. 
+Relevance to study (2-4 sentences): These results are relevant considering that one of the non-native vegetation species we are looking at is *Medicago polymorpha*, which is a nitrogen fixer. This could lead to greater non-native perennial productivity, and greater competition from non-native perennial grasses on native grasses. This again could inform annual trends in percent cover, particularly when we facet by species.
 
 ### Paper 12
 
@@ -201,15 +191,27 @@ Relevance to study (2-4 sentences): This is relevant to our question because one
 
 # References
 
-1. Abraham, J.K., Corbin, J.D. & D'Antonio, C.M. (2009). California native and exotic perennial grasses differ in their response to soil nitrogen, exotic annual grass density, and order of emergence. *Plant Ecology*, 201, 445–456. https://doi.org/10.1007/s11258-008-9467-1
-2. Alexander, J. D., McCafferty, M. K., Fricker, G. A., & James, J. J. (2023). Climate seasonality and extremes influence net primary productivity across California's grasslands, shrublands, and woodlands. *Environmental Research Letters*, 18(6), 064021. https://doi.org/10.1088/1748-9326/acd396
-3. Brunson, M. W., Green, K., Welsh, L. W., Endter-Wada, J., & Kettenring, K. M. (2025). Confronting the challenges of wetland restoration in a changing climate: Observations from the U.S. Intermountain West. *Restoration Ecology*, e70317. https://doi.org/10.1111/rec.70317
-4. Buisson, E., & Dutoit, T. (2022). Restoration sites on the Californian coast have different ecological histories that can influence restoration success. *Ecologia Mediterranea*, 48(1), 33–45.
-5. Corbin, J.D., & D'Antonio, C.M. (2010). Not novel, just better: competition between native and non-native plants in California grasslands that share species traits. *Plant Ecology*, 209, 71–81. https://doi.org/10.1007/s11258-010-9722-0
-6. D’Antonio, C.M., Bainbridge, S.J., Kennedy, C.W., Bartolome, J.W., & Reynolds, S.A. (2002). Ecology and Restoration of California Grasslands with special emphasis on the influence of fire and grazing on native grassland species.
-7. Gornish, E. S., & Shaw, J. (2017). Restoration manual for annual grassland systems in California (ANR Publication 8575). University of California Agriculture & Natural Resources. https://doi.org/10.3733/ucanr.8575
-8. Hamilton, J., Holzapfel, C. & Mahall, B. (1999). Coexistence and interference between a native perennial grass and non-native annual grasses in California. *Oecologia*, 121, 518–526. https://doi.org/10.1007/s004420050958
-9. Keeley, J.E., Klinger, R.C., Brennan, T.J., Lawson, D.M., La Grange, J. and Berg, K.N. (2023), A decade-long study of repeated prescription burning in California native grassland restoration. *Restor Ecol*, 31: e13939. https://doi.org/10.1111/rec.13939
-10. Molinari, N.A. & D'Antonio, C.M. (2014). Structural, compositional and trait differences between native- and non-native-dominated grassland patches. *Functional Ecology*, 28, 745–754. https://doi.org/10.1111/1365-2435.12206
-11. Schellenberg, F., Irvine, I. C., Witter, M. S., Nielsen, A. T., & Raulund-Rasmussen, K. (2020). Effects of drought and fire on native Stipa pulchra (Poaceae) recovery in southern California grasslands. *Madroño*, 67(1), 9–18. https://doi.org/10.3120/0024-9637-67.1.9
-12. St. Clair, S. B., Sudderth, E. A., Castanha, C., Torn, M. S., & Ackerly, D. D. (2009). Plant responsiveness to variation in precipitation and nitrogen is consistent across the compositional diversity of a California annual grassland. *Journal of Vegetation Science*, 20(5), 860–870. https://doi.org/10.1111/j.1654-1103.2009.01089.x
+[@abraham2008]
+
+[@alexander2023; @alexander2023a]
+
+[@brunson2026]
+
+[@buisson2022]
+
+[@corbin2010]
+
+\[[\@d'antonio2002](http://www.elkhornsloughctp.org/uploads/files/1126128955CROWNGrassReview.pdf)\]
+
+[@gornish2017]
+
+[@hamilton1999]
+
+[@keeley2023]
+
+[@molinari2014]
+
+[@schellenberg2020]
+
+[@st.clair2009]
+
