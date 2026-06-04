@@ -1,8 +1,8 @@
 ---
-title: "Literature dissection"
+title: "Literature dissection - revision"
 subtitle: "Spring 2026"
 author: "Henderson Vo, Abigail Malech, Alyssa Hagele"
-date: "05-29-2026"
+date: "06-07-2026"
 format: 
   pdf:
     toc: true
@@ -14,13 +14,11 @@ bibliography: references.bib
 ## Table
 
 | Photo point number | Date of photo | Season | Direction of photo | Link to photo |
-|:--------------|:--------------|:--------------|:--------------|:--------------|
+|:---|:---|:---|:---|:---|
 | 14_W_Oct23.jpg | October 2023 | Fall | West | [click here](https://ucsb.app.box.com/s/e2r7vg2d0rmfj0aa60m77tlba6bzc035/file/1355032143787) |
 | 14_W_Jan24.jpg | Jan 2025 | Winter | West | [click here](https://ucsb.app.box.com/s/e2r7vg2d0rmfj0aa60m77tlba6bzc035/file/1648701621479) |
 | 14_NE_Oct23.jpg | October 2023 | Fall | North East | [click here](https://ucsb.app.box.com/s/e2r7vg2d0rmfj0aa60m77tlba6bzc035/file/1355014900601) |
 | 14_NE_Jan24.jpg | Jan 2025 | Winter | North East | [click here](https://ucsb.app.box.com/s/e2r7vg2d0rmfj0aa60m77tlba6bzc035/file/1648707674156) |
-
-8.  Describe in 5-7 sentences total:
 
 We chose to examine the 2024 water year. This water year is relevant to our study because the data set that we are examining (veg) could have changes in species percent cover and richness that could be explained by the influx of rainfall at this time. The pictures also depict that in Fall of 2023 there was a prescribed burn, so we are looking at these photos to see what changed from that Fall to January 2024. We chose to examine two photo points at spot 22. The first pictures point west and the second set points northeast facing the slough. This photo point is relevant to our study because we want to examine grasslands at a time when a major prescribed fire occurred, as well as a wet water year. We see a significant increase in vegetation abundance in January compared to October for both directions. This could point to higher numbers of both native and non-native species presence. The northeast photos also show changes in water elevation for the slough, as it looks slightly higher in January than in October.
 
@@ -45,29 +43,6 @@ Relevance to your study: This poster is relevant to our study because we are con
 # Annotated bibliography
 
 ## Background
-
-You can find peer-reviewed articles by searching on Google Scholar, which is a large database of research papers, posters, and other materials.
-
-Note: while it may be tempting to use AI to provide a list of papers for you, you should *not* be using AI for any component of this activity. You'll accomplish the objective of articulating the connection between your study and other study systems/questions by completing the difficult task of sifting through papers that may not be relevant to you before finding one that is.
-
-Additionally, you can test out inserting citations in Quarto. See [this resource to insert a citation in a .qmd](https://envs-193dd.github.io/resources/adding-citations.html).
-
-## Directions
-
-Individually:
-
-1.  Search Google Scholar for papers that might be relevant to your study. One recommendation for how to start: search for whatever your focal variables may be + "wetland restoration" (for example, "bird abundance wetland restoration", "water salinity wetland restoration", "aquatic invertebrate wetland restoration").
-2.  Find 4-5 papers that might be relevant based on title and what shows up in the search.
-3.  Read the abstracts of those 4-5 papers.
-4.  Decide which - if any - are actually relevant to your project. Make a note of these papers. Note that a paper may be relevant in that it shares a) taxonomic groups, b) geographic regions, c) research questions, d) research methodology - there are lots of ways that existing research can be tied into your project.
-5.  If step 4 did not yield any relevant papers, repeat steps 2-4.
-6.  Search for papers until you have 4 relevant papers per person (12 total for a 3 person group).
-
-As a group:
-
-7.  Share the papers you found, discussing the main points of the paper and how they are relevant to your project.
-8.  Fill in the template for an annotated bibliography below.
-9.  In the "Main findings" or "Relevance to study" sections, insert a citation for the paper.
 
 ### Paper 1
 
@@ -181,7 +156,7 @@ Relevance to study (2-4 sentences): These results are relevant considering that 
 
 ### Paper 12
 
-Title: Structural, compositional and trait differences between native- and non-native-dominated grassland patches
+Title: **Structural, compositional and trait differences between native- and non-native-dominated grassland patches**
 
 Authors: Molinari, N.A. and D'Antonio, C.M.
 
@@ -190,5 +165,3 @@ Main findings (2-4 sentences): Grassland patches dominated by the exotic annual 
 Relevance to study (2-4 sentences): This is relevant to our question because one of the respone variables we are looking at is species richness. Based on these findings, we should expect areas (like transects) that are dominated by (have the highest percent cover in) non-native grasses to have the lowest species richness. We can facet by transect to explore this.
 
 # References
-
-
