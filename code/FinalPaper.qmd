@@ -26,8 +26,9 @@ library(gghighlight)
 
 ```{r}
 #| label: load-data
+# load vegetation data
 veg <- read_csv(here("data", "veg.csv"))
-
+# load vegetation metadata
 metadata <- read_csv(here("data", "vp_veg_metadata.csv"))
 ```
 
@@ -91,7 +92,7 @@ gl_explicit0 <- veg |>
 
 ```{r}
 #| label: alyssa wrangling for vis 1
-
+# create a new object from veg
 gl_implicitNA_alyssa <- veg |> 
   # filter all occurrences where transect_name contains VP
   filter(str_detect(transect_name, "GL") &
@@ -107,14 +108,17 @@ gl_implicitNA_alyssa <- veg |>
   # join with metadata by year_pool
   left_join(metadata, by = "year_pool")
 
-
+# create a new object
 grass_cover <- gl_implicitNA_alyssa |>
+  # filter to only include native and non-native cover grasses
   filter(cover_category %in% c("NATIVE COVER", "NON-NATIVE COVER"))
 
+# create a new object
 gl_transects <- gl_implicitNA_alyssa |>
-  filter(
+  filter( # filter to only include grassland transects
     transect_name %in% c("GL-02", "GL-07", "GL-09", "GL-10",
                          "GL-11", "GL-12", "GL-14", "GL-15"),
+    # filter to only include native and non-native cover observations
     cover_category %in% c("NATIVE COVER", "NON-NATIVE COVER"))
 ```
 
@@ -187,16 +191,17 @@ all_interest <- c(
 ```{r}
 #| label: alyssa wrangling for vis 2 
 
+# create a new object from species lists
 selected_species <- c(native_interest, non_native_interest)
 
+# create a new object from grasslands data
 selected_species_cover <- gl_implicitNA |>
+  # filter to only include species of interest
   filter(psoc %in% selected_species) |>
-  mutate(
+  mutate( # create a native classification column
     species_group = case_when(
       psoc %in% native_interest ~ "Native",
-      psoc %in% non_native_interest ~ "Non-native"
-    )
-  )
+      psoc %in% non_native_interest ~ "Non-native"))
 ```
 
 ```{r}
@@ -210,10 +215,15 @@ four_species <- c("Deinandra_fasciculata",
 
 # create object with only the four focal species
 four_species_cover <- selected_species_cover |>
+  # filter to only include four focal species
   filter(psoc %in% four_species) |>
+  # group by year, species, and native classification
   group_by(year, psoc, species_group) |>
+  # calculate total cover
   summarize(total_cover = sum(mean_pc, na.rm = TRUE),
-            .groups = "drop")
+            .groups = "drop") |>
+  # ungroup
+  ungroup()
 ```
 
 ```{r}
@@ -263,6 +273,7 @@ all_species_richness <- bind_rows(
 ```
 
 ```{r}
+#| label: figure-1
 #| fig-width: 7
 #| fig-height: 5
 # create combined bar plot
@@ -294,9 +305,9 @@ species_richness_bar_plot
 
 ```
 
-![Figure 1](../images/species-richness-time.png) 
 
 ```{r}
+#| label: figure-2
 #| fig-width: 7
 #| fig-height: 5
 
@@ -340,26 +351,28 @@ species_richness_bar_plot <- species_richness_summary |>
     size = 3,
     color = "gray40"
   ) +
+  # choose custom colors
   scale_fill_manual(values = c(
     "Native" = "#4A9782",
     "Non-native" = "#D16D5B"
   )) +
+  # add labels to x- and y-axes, title, and legend
   labs(
     title = "Native vs Non-native Species Richness Over Time",
     x = "Year",
     y = "Species Richness",
     fill = "Species Type"
   ) +
+  # change theme
   theme_bw()
 
 # display plot
 species_richness_bar_plot
 ```
 
-![Figure 2](../images/barpALL.png) 
 
 ```{r}
-#| label: updated bar plot for selected species
+#| label: figure-3
 #| fig-width: 7
 #| fig-height: 5
 
@@ -373,18 +386,25 @@ selected_species_richness <- selected_species_cover |>
   # count unique species present
   summarize(
     spp_rich = n_distinct(psoc),
-    .groups = "drop"
-  )
+    .groups = "drop") |>
+  # ungroup
+  ungroup()
+
 # summarize richness across years
 selected_species_richness_summary <- selected_species_richness |>
+  # group by year and species group
   group_by(year, species_group) |>
+  # calculate total richness
   summarize(
     total_richness = sum(spp_rich, na.rm = TRUE),
     .groups = "drop"
-  )
+  ) |> 
+  # ungroup
+  ungroup()
 
 # create stacked bar plot
 selected_species_richness_bar_plot <- selected_species_richness_summary |>
+  # base layer: ggplot
   ggplot(aes(x = year,
              y = total_richness,
              fill = species_group)) +
@@ -420,6 +440,7 @@ selected_species_richness_bar_plot <- selected_species_richness_summary |>
     y = "Species Richness",
     fill = "Species Group"
   ) +
+  # remove gap at the bottom, set custom limits
   scale_y_continuous(expand = c(0, 0),
                      limits = c(0, 80)) +
   # black and white theme
@@ -429,26 +450,34 @@ selected_species_richness_bar_plot <- selected_species_richness_summary |>
 selected_species_richness_bar_plot
 ```
 
-![Figure 3](../images/barpSELECTED.png)
-
 
 ```{r}
-#| label: abby revised vis-2 faceted species of interest over time ALL
+#| label: figure-4
 #| fig-width: 7
 #| fig-height: 5
 
 # NATIVE
-selected_pc_native = selected_species_cover |>
+# create a new object 
+selected_pc_native <- selected_species_cover |>
+  # group by year, species, and species group
   group_by(year, psoc, species_group) |>
+  # filter to only include native species
   filter(species_group == "Native") |> 
+  # calculate total cover
   summarize(total_cover = sum(mean_pc, na.rm = TRUE)) |>
+  # ungroup
   ungroup() |>
-  mutate(psoc = str_replace_all(psoc, "_", " ")) |> 
+  # edit all species names
+  mutate(psoc = str_replace_all(psoc, "_", " ")) |>
+  # arrange plot in order of descending total cover
   arrange(desc(total_cover)) |>
+  # convert species data type into factor
   mutate(psoc = factor(psoc, levels = unique(psoc))) |>
+  # base layer: ggplot, set x- and y-xes and differentiate by species group
   ggplot(aes(x = year,
              y = total_cover,
              color = species_group)) +
+  # first layer: line geometry
   geom_line(aes(group = psoc),
             linewidth = 1.2) +
   gghighlight(
@@ -481,7 +510,7 @@ selected_pc_native = selected_species_cover |>
   theme(legend.position = "none")
 
 # NON-NATIVE
-selected_pc_nonnative = selected_species_cover |>
+selected_pc_nonnative <- selected_species_cover |>
   group_by(year, psoc, species_group) |>
   filter(species_group == "Non-native") |> 
   summarize(total_cover = sum(mean_pc, na.rm = TRUE)) |>
@@ -526,34 +555,41 @@ selected_pc_nonnative = selected_species_cover |>
 selected_pc_native/selected_pc_nonnative
 ```
 
-![Figure 4](../images/selected_meanpc_UPDATED.png)
 
 ```{r}
-#| label: alyssa vis-1 faceted native non native pc over time 
+#| label: figure-5
 #| fig-width: 7
 #| fig-height: 5
+
 gl_transects |>
+  # group data frame by year, transect, and cover category
   group_by(year, transect_name, cover_category) |>
+  # calculate total cover
   summarize(total_cover = sum(mean_pc, na.rm = TRUE)) |>
+  # base layer: ggplot, set x- and y-axes, differentiate by cover category
   ggplot(aes(x = year,
              y = total_cover,
              color = cover_category)) +
+  # first layer: line geometry
   geom_line() +
+  # second layer: point geometry
   geom_point() +
+  # create panels by transect, set x scale to free
   facet_wrap(~ transect_name, scales = "free_x") +
+  # add title, axes labels, and legend label
   labs(
     title = "Native vs Non-Native Percent Cover Over Time Across GL Transects",
     x = "Year",
     y = "Total Percent Cover",
     color = "Cover Category"
   ) +
+  # custom color
   scale_color_manual(
     values = c("NON-NATIVE COVER" = "#C96B5C",
                "NATIVE COVER" = "#4A9782")) +
+  # change theme
   theme_bw()
 ```
-
-![Figure 5](../images/perc_cover_GLtransects.png)
 
 
 ```{r}
@@ -914,7 +950,7 @@ polypogon_plot <- selected_species_cover |>
 ```
 
 ```{r}
-#| label: focal-species-combined
+#| label: figure-6
 #| fig-width: 10
 #| fig-height: 8
 
@@ -948,8 +984,6 @@ combined_species_plot <-
 # display plot
 combined_species_plot
 ```
-
-![Figure 6](../images/foursppkey.png)
 
 # Discussion
 
