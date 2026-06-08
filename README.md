@@ -53,4 +53,7 @@ The rendered images for our advanced elective outline is
 ![here](/images/Outside.png)
 ![here](/images/Inside.png)
 
+## Related repositories
+
+The proposal for this project can be found [here](https://github.com/alyssahagele29/project-proposal).
 
