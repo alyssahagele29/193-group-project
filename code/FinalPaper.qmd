@@ -34,6 +34,24 @@ metadata <- read_csv(here("data", "vp_veg_metadata.csv"))
 
 # Introduction
 
+Restoration efforts at the North Campus Open Space (NCOS) are trying to increase species richness across major habitats, where key species are driving changes in composition, habitat stability, and biodiversity. 10 native and non-native plants were selected for this study based on high observations, presence during all monitoring years (2021-2025), and frequent mention in the 2024 monitoring report and native plant catalog (CCBER). This study specifically looks at how species responded to a prescribed burn that happened in Fall 2023 as well as the effects of a year with heavier rainfall in 2024. Therefore, the main questions for this study include, **“how has percent cover of key native species and overall native species richness changed through time in grasslands compared to non-native species?”** and **“What impact does the 2023 fire and 2024 water year have on species richness and cover for both native and non-native grassland species?”** The vegetation and metadata data sets were used for this study.
+
+Our native species of interest are:
+`Deinandra fasciculata`
+`Distichlis spicata` 
+`Erigeron canadensis`  
+`Stipa pulchra`      
+`Symphyotrichum subulatum`,
+
+And our non-native species of interest are:
+`Bromus hordeaceus` 
+`Festuca myuros`     
+`Festuca perennis`       
+`Medicago polymorpha`
+`Polypogon monspeliensis`
+
+This study will pay close attention to Stipa pulchra — California's state grass — as well as Festuca perennis, a non-native grass, as these species are greatly abundant across all eight grassland transects. Lastly, Deinandra fasciculata is a species endemic to the Santa Barbara region and was stated to have “responded well to the fire”, which might indicate that native species perform better after a prescribed burn (Rickard 2024). The monitoring report also stated that S. pulchra was predicted to respond well to the fires. Other factors besides native/non-native status will be taken into account in this study, such as perennial versus annual grasses. Monitoring plant cover and richness over time can best inform restoration experts how certain intentional or unintentional events affect overall restoration progress. A study conducted on a grassland habitat found that species show positive responses to water availability extremes as net primary productivity (NPP) increased during wet years. Additionally, functional diversity was considered an indicator of healthier ecosystems and more stable NPP, which can be informed by *structural* diversity, such as total cover and richness (Alexander et al., 2023). This is significant in the case of NCOS, as increasing native species abundance and diversity can enhance ecosystem health and resilience.
+
 # Methods
 
 To answer our research question, we used a vegetation dataset sourced from the Cheadle Center for Biodiversity and Ecological Restoration (CCBER), and provided to us by the ENVS 193DD course. This dataset spans 5 years (2021-2025) of vegetation data from across several habitats in North Campus Open Space (NCOS) including grasslands, mosaic habitats, wetlands, open water, woodlands, and shrublands.
@@ -187,7 +205,6 @@ all_interest <- c(
 )
 ```
 
-
 ```{r}
 #| label: alyssa wrangling for vis 2 
 
@@ -305,7 +322,6 @@ species_richness_bar_plot
 
 ```
 
-
 ```{r}
 #| label: figure-2
 #| fig-width: 7
@@ -369,7 +385,6 @@ species_richness_bar_plot <- species_richness_summary |>
 # display plot
 species_richness_bar_plot
 ```
-
 
 ```{r}
 #| label: figure-3
@@ -449,7 +464,6 @@ selected_species_richness_bar_plot <- selected_species_richness_summary |>
 # display plot
 selected_species_richness_bar_plot
 ```
-
 
 ```{r}
 #| label: figure-4
@@ -555,7 +569,6 @@ selected_pc_nonnative <- selected_species_cover |>
 selected_pc_native/selected_pc_nonnative
 ```
 
-
 ```{r}
 #| label: figure-5
 #| fig-width: 7
@@ -590,7 +603,6 @@ gl_transects |>
   # change theme
   theme_bw()
 ```
-
 
 ```{r}
 #| label: stipa-jitter-plot
