@@ -38,21 +38,17 @@ Restoration efforts at the North Campus Open Space (NCOS) are trying to increase
 
 Our native species of interest are:
 
-`Deinandra fasciculata`,
-`Distichlis spicata`,
-`Erigeron canadensis`,  
-`Stipa pulchra`,      
+`Deinandra fasciculata`, `Distichlis spicata`, `Erigeron canadensis`,\
+`Stipa pulchra`,\
 `Symphyotrichum subulatum`,
 
 And our non-native species of interest are:
 
-`Bromus hordeaceus`, 
-`Festuca myuros`,     
-`Festuca perennis`,       
-`Medicago polymorpha`,
-`Polypogon monspeliensis`.
+`Bromus hordeaceus`, `Festuca myuros`,\
+`Festuca perennis`,\
+`Medicago polymorpha`, `Polypogon monspeliensis`.
 
-This study will pay close attention to Stipa pulchra — California's state grass — as well as Festuca perennis, a non-native grass, as these species are greatly abundant across all eight grassland transects. Lastly, Deinandra fasciculata is a species endemic to the Santa Barbara region and was stated to have “responded well to the fire”, which might indicate that native species perform better after a prescribed burn (Rickard 2024). The monitoring report also stated that S. pulchra was predicted to respond well to the fires. Other factors besides native/non-native status will be taken into account in this study, such as perennial versus annual grasses. Monitoring plant cover and richness over time can best inform restoration experts how certain intentional or unintentional events affect overall restoration progress. A study conducted on a grassland habitat found that species show positive responses to water availability extremes as net primary productivity (NPP) increased during wet years. Additionally, functional diversity was considered an indicator of healthier ecosystems and more stable NPP, which can be informed by *structural* diversity, such as total cover and richness [@alexander2023]. This is significant in the case of NCOS, as increasing native species abundance and diversity can enhance ecosystem health and resilience.
+This study will pay close attention to Stipa pulchra — California's state grass — as well as Festuca perennis, a non-native grass, as these species are greatly abundant across all eight grassland transects. Lastly, Deinandra fasciculata is a species endemic to the Santa Barbara region and was stated to have “responded well to the fire”, which might indicate that native species perform better after a prescribed burn [@rickard2024]. The monitoring report also stated that S. pulchra was predicted to respond well to the fires. Other factors besides native/non-native status will be taken into account in this study, such as perennial versus annual grasses. Monitoring plant cover and richness over time can best inform restoration experts how certain intentional or unintentional events affect overall restoration progress. A study conducted on a grassland habitat found that species show positive responses to water availability extremes as net primary productivity (NPP) increased during wet years. Additionally, functional diversity was considered an indicator of healthier ecosystems and more stable NPP, which can be informed by *structural* diversity, such as total cover and richness [@alexander2023]. This is significant in the case of NCOS, as increasing native species abundance and diversity can enhance ecosystem health and resilience.
 
 # Methods
 
@@ -294,83 +290,50 @@ all_species_richness <- bind_rows(
 
 ```{r}
 #| label: figure-1
-#| fig-width: 7
 #| fig-height: 5
-
-
-# create combined bar plot
-species_richness_bar_plot <- all_species_richness |>
-  # base 1: ggplot
-  ggplot(aes(x = year,
-             y = spp_rich,
-             fill = type)) +
-  # layer 1: bars for species richness 
-  geom_col() +
-  # facet by transect
-  facet_wrap(~ transect_name) +
-  # customize colors
-  scale_fill_manual(values = c(
-    "Native" = "#4A9782",
-    "Non-native" = "#D16D5B"
-  )) +
-  # relabeling x and y axis 
-  # adding title 
-  labs(
-    title = "Native vs Non-native Species Richness Over Time",
-    x = "Year",
-    y = "Species Richness",
-    fill = "Species Type"
-  ) +
-  # custom theme
-  theme_bw()
-# display plot
-species_richness_bar_plot
-
-```
-
-```{r}
-#| label: figure-2
 #| fig-width: 7
-#| fig-height: 5
-
 
 # combine native and non-native richness data
 all_species_richness <- bind_rows(
-  #adding species type column to native and invasive spp richness
   native_species_rich |>
+  # create native column
     mutate(type = "Native"),
   invasive_species_rich |>
+  # create non-native column
     mutate(type = "Non-native")
 )
 # summarize species richness by year and type
 species_richness_summary <- all_species_richness |>
-  #group by year and spp type
+  # group by year, stacked bar by type
   group_by(year, type) |>
-  #calculate total species richness for each year and type
+  # calculate total richness column
   summarize(
     total_richness = sum(spp_rich, na.rm = TRUE),
     .groups = "drop"
   )
 # create stacked bar plot over time
 species_richness_bar_plot <- species_richness_summary |>
-  # base layer: ggplot
-  # x axis is year
-  # y axis is total_richness
-  # fill by spp type
-  ggplot(aes(x = year,
+  # adding ggplot base layer
+  ggplot(aes
+      # x-axis: year
+      # y-axis: total richness
+      # fill by native/non-native
+         (x = year,
              y = total_richness,
              fill = type)) +
-  # first layer: stacked bars
+  # stacked bars
   geom_col() +
-  # second layer: line showing prescribed fire
-  # customizing line
+  # remove space between x-axis
+  scale_y_continuous(expand = c(0, 0),
+                     limits = c(0, 210)) +
+  # prescribed fire occurred after summer 2023 sampling
   geom_vline(
     xintercept = 2023.5,
     linetype = "dashed",
     color = "gray50",
     linewidth = 1
   ) +
-  # second layer: label prescribed fire
+  # label prescribed fire event
   annotate(
     "text",
     x = 2023.5,
@@ -381,19 +344,19 @@ species_richness_bar_plot <- species_richness_summary |>
     size = 3,
     color = "gray40"
   ) +
-  # choose custom colors
+  # adding custom colors
   scale_fill_manual(values = c(
     "Native" = "#4A9782",
     "Non-native" = "#D16D5B"
   )) +
-  # add labels to x- and y-axes, title, and legend
+  # adding custom labels
   labs(
     title = "Native vs Non-native Species Richness Over Time",
     x = "Year",
     y = "Species Richness",
     fill = "Species Type"
   ) +
-  # change theme
+  # changing from default theme
   theme_bw()
 
 # display plot
@@ -401,90 +364,9 @@ species_richness_bar_plot
 ```
 
 ```{r}
-#| label: figure-3
-#| fig-width: 7
-#| fig-height: 5
-
-
-# create species richness object for selected species
-selected_species_richness <- selected_species_cover |>
-  # filter percent cover to identify species presence
-  filter(mean_pc > 0) |>
-  # group by year, transect, and species group
-  group_by(year, transect_name, species_group) |>
-  # count unique species present
-  summarize(
-    spp_rich = n_distinct(psoc),
-    .groups = "drop") |>
-  # ungroup
-  ungroup()
-
-# summarize richness across years
-selected_species_richness_summary <- selected_species_richness |>
-  # group by year and species group
-  group_by(year, species_group) |>
-  # calculate total richness
-  summarize(
-    total_richness = sum(spp_rich, na.rm = TRUE),
-    .groups = "drop"
-  ) |> 
-  # ungroup
-  ungroup()
-
-# create stacked bar plot
-selected_species_richness_bar_plot <- selected_species_richness_summary |>
-  # base layer: ggplot
-  ggplot(aes(x = year,
-             y = total_richness,
-             fill = species_group)) +
-  # first layer: create stacked bars
-  geom_col() +
-  # second layer: prescribed fire line
-  # customizing line
-  geom_vline(
-    xintercept = 2023.5,
-    linetype = "dashed",
-    color = "gray50",
-    linewidth = 1
-  ) +
-  # third layer: label prescribed fire event
-  # customizing label
-  annotate(
-    "text",
-    x = 2023.5,
-    y = 68,
-    label = "Prescribed Fire\n(Fall 2023)",
-    angle = 90,
-    vjust = -0.5,
-    size = 3,
-    color = "gray40"
-  ) +
-  # customize colors
-  scale_fill_manual(values = c(
-    "Native" = "#4A9782",
-    "Non-native" = "#D16D5B"
-  )) +
-  # add labels for x/y axis, title, legend
-  labs(
-    title = "Selected Species Richness Over Time",
-    x = "Year",
-    y = "Species Richness",
-    fill = "Species Group"
-  ) +
-  # remove gap at the bottom, set y-axis limits
-  scale_y_continuous(expand = c(0, 0),
-                     limits = c(0, 80)) +
-  # custom theme
-  theme_bw()
-
-# display plot
-selected_species_richness_bar_plot
-```
-
-```{r}
-#| label: figure-4
-#| fig-width: 7
-#| fig-height: 5
+#| label: figure-2
+#| fig-width: 10
+#| fig-height: 6
 
 # create a new object 
 selected_pc_native <- selected_species_cover |>
@@ -544,6 +426,7 @@ selected_pc_native <- selected_species_cover |>
   theme_bw() + 
   #change x axis text size
   theme(axis.text.x = element_text(size = 8)) +
+  theme(strip.text.x = element_text(size = 7.5)) +
   #remove legend
   theme(legend.position = "none")
 
@@ -604,6 +487,7 @@ selected_pc_nonnative <- selected_species_cover |>
   theme_bw() + 
   #change x axis text size
   theme(axis.text.x = element_text(size = 8)) + 
+  theme(strip.text.x = element_text(size = 7.5)) +
   #remove legend 
   theme(legend.position = "none")
 
@@ -612,9 +496,9 @@ selected_pc_native/selected_pc_nonnative
 ```
 
 ```{r}
-#| label: figure-5
-#| fig-width: 7
-#| fig-height: 5
+#| label: figure-3
+#| fig-width: 10
+#| fig-height: 7
 
 gl_transects |>
   # group data frame by year, transect, and cover category
@@ -974,7 +858,7 @@ polypogon_plot <- selected_species_cover |>
 ```
 
 ```{r}
-#| label: figure-6
+#| label: figure-4
 #| fig-width: 10
 #| fig-height: 8
 
@@ -1019,7 +903,7 @@ Concerning Stipa pulchra, our results supported other relevant studies that also
 
 **Relevance to Other Ecosystems**
 
-Our results allow us to make inferences about California grassland ecosystems. The patterns exhibited as NCOS have been well-documented among several California grassland studies; disturbance events such as fires, sheep grazing, and wet water years often favor fast-growing annuals over slow-establishing perennial grasses. The decline of Stipa pulchra and the increase of fast-growing annuals reflect the overall pattern of California grasslands in which annuals are outcompeting native perennials. One new pattern we found from our study is that native percent cover generally increased in transects located near vernal pools 1 and 2, which are the deepest vernal pools at NCOS that had the highest water input during the 2024 water year. This suggests that greater water availability may be benefiting native species establishment and that ecosystems with deeper vernal pools may be more beneficial to native perennial species because deeper root systems may have greater access to water. 
+Our results allow us to make inferences about California grassland ecosystems. The patterns exhibited as NCOS have been well-documented among several California grassland studies; disturbance events such as fires, sheep grazing, and wet water years often favor fast-growing annuals over slow-establishing perennial grasses. The decline of Stipa pulchra and the increase of fast-growing annuals reflect the overall pattern of California grasslands in which annuals are outcompeting native perennials. One new pattern we found from our study is that native percent cover generally increased in transects located near vernal pools 1 and 2, which are the deepest vernal pools at NCOS that had the highest water input during the 2024 water year. This suggests that greater water availability may be benefiting native species establishment and that ecosystems with deeper vernal pools may be more beneficial to native perennial species because deeper root systems may have greater access to water.
 
 **Limitations**
 
