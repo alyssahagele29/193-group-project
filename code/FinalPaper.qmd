@@ -895,6 +895,17 @@ combined_species_plot <-
 combined_species_plot
 ```
 
+
+
+**Percent Cover and Species Richness Trends**
+
+Overall, our results show that both native and non-native species richness increased following the prescribed burn of fall 2023 and during the 2024 water year, with non-native richness having the largest increase. Concerning percent cover, we saw native percent cover increase in transects 14 and 15 after the burn, which are the closest transects to vernal pools 1 and 2. Non-native percent cover after the prescribed burn increased in transects 7, 10, 11, and 15, with non-native cover generally remaining relatively high across most transects during the study period. Spatially, as mentioned, we found that native species percent cover increased most strongly near vernal pools 1 and 2, which is significant because these vernal pools also experienced the greatest water depths during the 2024 water year. Lastly, we found that non-native percent cover and overall species richness increased most strongly in the southeastern grassland transects. 
+
+**Focal Species Trends**
+
+We also found several meaningful patterns concerning our focal species. The percent cover of Stipa pulchra, a key NCOS restoration target species, increased from 2021 to 2023; however, it declined after the burn and the 2024 water year, overall decreasing over time. The percent cover of Deinandra fasciculata, a species endemic to Santa Barbara, remained relatively low throughout the study period; however, percent cover increased slightly following the prescribed burn and during the 2024 water year. Concerning non-native focal species, we found that Festuca perennis, another restoration target, decreased slightly after the burn; however, it rebounded in 2025 and now has one of the highest percent covers out of any species. Polypogon monspeliensis did not seem to react to the burn as it increased slightly in 2024; however, it may have been outcompeted by other species during the 2024 water year, as it declined substantially in 2025 and now has a very small percent cover. 
+
+
 # Discussion
 
 **Connection to Existing Publications**
