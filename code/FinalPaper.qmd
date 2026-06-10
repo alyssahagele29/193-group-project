@@ -217,7 +217,8 @@ selected_species <- c(native_interest, non_native_interest)
 selected_species_cover <- gl_implicitNA |>
   # filter to only include species of interest
   filter(psoc %in% selected_species) |>
-  mutate( # create a native classification column
+  # classify each species as native or non native
+  mutate(
     species_group = case_when(
       psoc %in% native_interest ~ "Native",
       psoc %in% non_native_interest ~ "Non-native"))
@@ -293,33 +294,34 @@ all_species_richness <- bind_rows(
 
 ```{r}
 #| label: figure-1
-#| fig-width: 10
-#| fig-height: 8
+#| fig-width: 7
+#| fig-height: 5
+
+
 # create combined bar plot
 species_richness_bar_plot <- all_species_richness |>
-  # create ggplot
+  # base 1: ggplot
   ggplot(aes(x = year,
              y = spp_rich,
              fill = type)) +
-  # create side-by-side bars
+  # layer 1: bars for species richness 
   geom_col() +
   # facet by transect
-  facet_wrap(~ transect_name, scales = "free_x") +
+  facet_wrap(~ transect_name) +
   # customize colors
   scale_fill_manual(values = c(
     "Native" = "#4A9782",
     "Non-native" = "#D16D5B"
   )) +
-  scale_y_continuous(expand = c(0, 0),
-                     limits = c(0, 34)) +
-  # add labels
+  # relabeling x and y axis 
+  # adding title 
   labs(
     title = "Native vs Non-native Species Richness Over Time",
     x = "Year",
     y = "Species Richness",
     fill = "Species Type"
   ) +
-  # black and white theme
+  # custom theme
   theme_bw()
 # display plot
 species_richness_bar_plot
@@ -334,6 +336,7 @@ species_richness_bar_plot
 
 # combine native and non-native richness data
 all_species_richness <- bind_rows(
+  #adding species type column to native and invasive spp richness
   native_species_rich |>
     mutate(type = "Native"),
   invasive_species_rich |>
@@ -341,28 +344,33 @@ all_species_richness <- bind_rows(
 )
 # summarize species richness by year and type
 species_richness_summary <- all_species_richness |>
+  #group by year and spp type
   group_by(year, type) |>
+  #calculate total species richness for each year and type
   summarize(
     total_richness = sum(spp_rich, na.rm = TRUE),
     .groups = "drop"
   )
 # create stacked bar plot over time
 species_richness_bar_plot <- species_richness_summary |>
+  # base layer: ggplot
+  # x axis is year
+  # y axis is total_richness
+  # fill by spp type
   ggplot(aes(x = year,
              y = total_richness,
              fill = type)) +
-  # stacked bars
+  # first layer: stacked bars
   geom_col() +
-  scale_y_continuous(expand = c(0, 0),
-                     limits = c(0, 210)) +
-  # prescribed fire occurred after summer 2023 sampling
+  # second layer: line showing prescribed fire
+  # customizing line
   geom_vline(
     xintercept = 2023.5,
     linetype = "dashed",
     color = "gray50",
     linewidth = 1
   ) +
-  # label prescribed fire event
+  # second layer: label prescribed fire
   annotate(
     "text",
     x = 2023.5,
@@ -429,16 +437,18 @@ selected_species_richness_bar_plot <- selected_species_richness_summary |>
   ggplot(aes(x = year,
              y = total_richness,
              fill = species_group)) +
-  # create stacked bars
+  # first layer: create stacked bars
   geom_col() +
-  # prescribed fire occurred after summer 2023 sampling
+  # second layer: prescribed fire line
+  # customizing line
   geom_vline(
     xintercept = 2023.5,
     linetype = "dashed",
     color = "gray50",
     linewidth = 1
   ) +
-  # label prescribed fire event
+  # third layer: label prescribed fire event
+  # customizing label
   annotate(
     "text",
     x = 2023.5,
@@ -454,17 +464,17 @@ selected_species_richness_bar_plot <- selected_species_richness_summary |>
     "Native" = "#4A9782",
     "Non-native" = "#D16D5B"
   )) +
-  # add labels
+  # add labels for x/y axis, title, legend
   labs(
     title = "Selected Species Richness Over Time",
     x = "Year",
     y = "Species Richness",
     fill = "Species Group"
   ) +
-  # remove gap at the bottom, set custom limits
+  # remove gap at the bottom, set y-axis limits
   scale_y_continuous(expand = c(0, 0),
                      limits = c(0, 80)) +
-  # black and white theme
+  # custom theme
   theme_bw()
 
 # display plot
@@ -473,10 +483,9 @@ selected_species_richness_bar_plot
 
 ```{r}
 #| label: figure-4
-#| fig-width: 10
-#| fig-height: 6
+#| fig-width: 7
+#| fig-height: 5
 
-# NATIVE
 # create a new object 
 selected_pc_native <- selected_species_cover |>
   # group by year, species, and species group
@@ -487,19 +496,21 @@ selected_pc_native <- selected_species_cover |>
   summarize(total_cover = sum(mean_pc, na.rm = TRUE)) |>
   # ungroup
   ungroup() |>
-  # edit all species names
+  # replace underscores with spaces in species names
   mutate(psoc = str_replace_all(psoc, "_", " ")) |>
   # arrange plot in order of descending total cover
   arrange(desc(total_cover)) |>
   # convert species data type into factor
   mutate(psoc = factor(psoc, levels = unique(psoc))) |>
-  # base layer: ggplot, set x- and y-xes and differentiate by species group
+  # base layer: ggplot, 
+  # set x- and y-axis and differentiate by species group
   ggplot(aes(x = year,
              y = total_cover,
              color = species_group)) +
   # first layer: line geometry
   geom_line(aes(group = psoc),
             linewidth = 1.2) +
+  #second layer: highlight native species line
   gghighlight(
     use_direct_label = FALSE,
     unhighlighted_params = list(
@@ -508,42 +519,59 @@ selected_pc_native <- selected_species_cover |>
       linewidth = 0.5
     )
   ) +
+  #custom native spp color 
   scale_color_manual(
     breaks = c("Native"),
     values = c(
       "Native" = "#4A9782"
     )
   ) +
+  #seperate panels per species
   facet_wrap(~ psoc, scales = "free_x", nrow = 1) +
+  #set x axis breaks + spacing
   scale_x_continuous(
     breaks = 2021:2025,
     expand = expansion(mult = c(0.08, 0.08))
   ) +
+  #relabel title, x and y axis, legend 
   labs(
     title = "Selected Native Species Percent Cover Over Time",
     x = "Year",
     y = "Total Percent Cover",
     color = "Species Group"
   ) +
+  #custom theme 
   theme_bw() + 
-  theme(axis.text.x = element_text(size = 7)) +
-  theme(strip.text = element_text(size = 8)) +
+  #change x axis text size
+  theme(axis.text.x = element_text(size = 8)) +
+  #remove legend
   theme(legend.position = "none")
 
-# NON-NATIVE
+#create new object from selected_species_cover
 selected_pc_nonnative <- selected_species_cover |>
+  #group by year, species, species group 
   group_by(year, psoc, species_group) |>
-  filter(species_group == "Non-native") |> 
+  #filter to only include invasives
+  filter(species_group == "Non-native") |>
+  #calculate total percent cover for each species
   summarize(total_cover = sum(mean_pc, na.rm = TRUE)) |>
+  #ungroup data frame
   ungroup() |>
+  #replace dashes in species names with spaces
   mutate(psoc = str_replace_all(psoc, "_", " ")) |> 
+  #arrange species by descending total cover
   arrange(desc(total_cover)) |>
+  #convert species names into factor to preserve order
   mutate(psoc = factor(psoc, levels = unique(psoc))) |>
+  #base layer: ggplot 
+  #x axis is year, y axis is total_cover, color by species group 
   ggplot(aes(x = year,
              y = total_cover,
              color = species_group)) +
+  #first layer: lines
   geom_line(aes(group = psoc),
             linewidth = 1.2) +
+  #second layer: highlight invasive spp lines
   gghighlight(
     use_direct_label = FALSE,
     unhighlighted_params = list(
@@ -552,50 +580,57 @@ selected_pc_nonnative <- selected_species_cover |>
       linewidth = 0.5
     )
   ) +
+  #custom color for invasive species 
   scale_color_manual(
     breaks = c("Non-native"),
     values = c(
       "Non-native" = "#C96B5C"
     )
   ) +
+  #separate panels for each species 
   facet_wrap(~ psoc, scales = "free_x", nrow = 1) +
   scale_x_continuous(
     breaks = 2021:2025,
     expand = expansion(mult = c(0.08, 0.08))
   ) +
+  #relabeling title, x and y axis
   labs(
     title = "Selected Non-native Species Percent Cover Over Time",
     x = "Year",
     y = "Total Percent Cover",
     color = "Species Group"
   ) +
+  #custom theme
   theme_bw() + 
-  theme(axis.text.x = element_text(size = 7)) + 
-  theme(strip.text = element_text(size = 8)) +
+  #change x axis text size
+  theme(axis.text.x = element_text(size = 8)) + 
+  #remove legend 
   theme(legend.position = "none")
 
+#combine native and non-native plots into one figure
 selected_pc_native/selected_pc_nonnative
 ```
 
 ```{r}
 #| label: figure-5
-#| fig-width: 10
-#| fig-height: 8
+#| fig-width: 7
+#| fig-height: 5
 
 gl_transects |>
   # group data frame by year, transect, and cover category
   group_by(year, transect_name, cover_category) |>
   # calculate total cover
   summarize(total_cover = sum(mean_pc, na.rm = TRUE)) |>
-  # base layer: ggplot, set x- and y-axes, differentiate by cover category
+  # base layer: ggplot
+  # x axis is year, y is total_cover, color by cover category
   ggplot(aes(x = year,
              y = total_cover,
              color = cover_category)) +
-  # first layer: line geometry
+  # first layer: lines
   geom_line() +
-  # second layer: point geometry
+  # second layer: points
   geom_point() +
-  # create panels by transect, set x scale to free
+  #panels by transect, set x scale to free
   facet_wrap(~ transect_name, scales = "free_x") +
   # add title, axes labels, and legend label
   labs(
