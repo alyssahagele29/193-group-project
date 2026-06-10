@@ -293,8 +293,8 @@ all_species_richness <- bind_rows(
 
 ```{r}
 #| label: figure-1
-#| fig-width: 7
-#| fig-height: 5
+#| fig-width: 10
+#| fig-height: 8
 # create combined bar plot
 species_richness_bar_plot <- all_species_richness |>
   # create ggplot
@@ -304,12 +304,14 @@ species_richness_bar_plot <- all_species_richness |>
   # create side-by-side bars
   geom_col() +
   # facet by transect
-  facet_wrap(~ transect_name) +
+  facet_wrap(~ transect_name, scales = "free_x") +
   # customize colors
   scale_fill_manual(values = c(
     "Native" = "#4A9782",
     "Non-native" = "#D16D5B"
   )) +
+  scale_y_continuous(expand = c(0, 0),
+                     limits = c(0, 34)) +
   # add labels
   labs(
     title = "Native vs Non-native Species Richness Over Time",
@@ -351,6 +353,8 @@ species_richness_bar_plot <- species_richness_summary |>
              fill = type)) +
   # stacked bars
   geom_col() +
+  scale_y_continuous(expand = c(0, 0),
+                     limits = c(0, 210)) +
   # prescribed fire occurred after summer 2023 sampling
   geom_vline(
     xintercept = 2023.5,
@@ -469,8 +473,8 @@ selected_species_richness_bar_plot
 
 ```{r}
 #| label: figure-4
-#| fig-width: 7
-#| fig-height: 5
+#| fig-width: 10
+#| fig-height: 6
 
 # NATIVE
 # create a new object 
@@ -522,7 +526,8 @@ selected_pc_native <- selected_species_cover |>
     color = "Species Group"
   ) +
   theme_bw() + 
-  theme(axis.text.x = element_text(size = 8)) +
+  theme(axis.text.x = element_text(size = 7)) +
+  theme(strip.text = element_text(size = 8)) +
   theme(legend.position = "none")
 
 # NON-NATIVE
@@ -565,7 +570,8 @@ selected_pc_nonnative <- selected_species_cover |>
     color = "Species Group"
   ) +
   theme_bw() + 
-  theme(axis.text.x = element_text(size = 8)) + 
+  theme(axis.text.x = element_text(size = 7)) + 
+  theme(strip.text = element_text(size = 8)) +
   theme(legend.position = "none")
 
 selected_pc_native/selected_pc_nonnative
@@ -573,8 +579,8 @@ selected_pc_native/selected_pc_nonnative
 
 ```{r}
 #| label: figure-5
-#| fig-width: 7
-#| fig-height: 5
+#| fig-width: 10
+#| fig-height: 8
 
 gl_transects |>
   # group data frame by year, transect, and cover category
