@@ -105,7 +105,7 @@ gl_explicit0 <- veg |>
 ```
 
 ```{r}
-#| label: alyssa wrangling for vis 1
+#| label: wrangling-vis-5
 # create a new object from veg
 gl_implicitNA_alyssa <- veg |> 
   # filter all occurrences where transect_name contains VP
@@ -202,7 +202,7 @@ all_interest <- c(
 ```
 
 ```{r}
-#| label: alyssa wrangling for vis 2 
+#| label: wrangling-vis-4 
 
 # create a new object from species lists
 selected_species <- c(native_interest, non_native_interest)
@@ -273,7 +273,7 @@ invasive_species_rich <- gl_explicit0 |>
 ```
 
 ```{r}
-#| label: alyssa vis-3 species richness native non native wrangling
+#| label: wrangling-vis-1
 
 # combine native and non-native richness data
 all_species_richness <- bind_rows(
@@ -547,7 +547,7 @@ gl_transects |>
   facet_wrap(~ transect_name, scales = "free_x") +
   # relabel title, x and y axis, legend
   labs(
-    title = "Native vs Non-Native Percent Cover Over Time Across GL Transects",
+    title = "Native vs Non-Native Percent Cover Over Time Across Grassland Transects",
     x = "Year",
     y = "Total Percent Cover",
     color = "Cover Category"
