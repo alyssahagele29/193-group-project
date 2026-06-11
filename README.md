@@ -30,10 +30,11 @@ library(patchwork)
 │   ├── timeline-check-in.qmd
 │   ├── in-class-code.pdf                         # class code for data management
 │   ├── in-class-code.qmd
-│   ├── FinalPaper.qmd                            # draft for final paper
+│   ├── FinalPaper.qmd                            # code and output for final paper
 │   ├── FinalPaper.pdf
 │   ├── lit_template.pdf                          # literature dissection
-│   └── lit_template.qmd 
+│   ├── lit_template.qmd 
+│   └── references.bib                            # quarto citations 
 ├── data
 │   ├── veg.csv                                   # vegetation survey data
 │   └── vp_veg_metadata.csv                       # transect information
