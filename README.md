@@ -47,7 +47,9 @@ The rendered document for sample visualizations is [here](https://github.com/aly
 
 The rendered document for the timeline check-in is [here](https://github.com/alyssahagele29/193-group-project/blob/main/code/timeline-check-in.pdf).
 
-There rendered document for the literature dissection is [here](https://github.com/alyssahagele29/193-group-project/blob/main/code/lit_template.pdf).
+The rendered document for the literature dissection is [here](https://github.com/alyssahagele29/193-group-project/blob/main/code/lit_template.pdf).
+
+The rendered document for the final paper is [here](https://github.com/alyssahagele29/193-group-project/blob/main/code/FinalPaper.pdf).
 
 The rendered images for our advanced elective outline is
 ![here](/images/Outside.png)
