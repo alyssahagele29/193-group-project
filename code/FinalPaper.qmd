@@ -38,11 +38,11 @@ Restoration efforts at the North Campus Open Space (NCOS) are trying to increase
 
 Our native species of interest are:
 
-`Deinandra fasciculata`,\ `Distichlis spicata`,\ `Erigeron canadensis`,\ `Stipa pulchra`, `Symphyotrichum subulatum`,
+`Deinandra fasciculata`, `Distichlis spicata`, `Erigeron canadensis`, `Stipa pulchra`, `Symphyotrichum subulatum`,
 
 And our non-native species of interest are:
 
-`Bromus hordeaceus`,\ `Festuca myuros`,\ `Festuca perennis`,\ `Medicago polymorpha`,\ `Polypogon monspeliensis`.
+`Bromus hordeaceus`, `Festuca myuros`, `Festuca perennis`, `Medicago polymorpha`, `Polypogon monspeliensis`.
 
 This study will pay close attention to Stipa pulchra — California's state grass — as well as Festuca perennis, a non-native grass, as these species are greatly abundant across all eight grassland transects. Lastly, Deinandra fasciculata is a species endemic to the Santa Barbara region and was stated to have “responded well to the fire”, which might indicate that native species perform better after a prescribed burn [@rickard2024]. The monitoring report also stated that S. pulchra was predicted to respond well to the fires. Other factors besides native/non-native status will be taken into account in this study, such as perennial versus annual grasses. Monitoring plant cover and richness over time can best inform restoration experts how certain intentional or unintentional events affect overall restoration progress. A study conducted on a grassland habitat found that species show positive responses to water availability extremes as net primary productivity (NPP) increased during wet years. Additionally, functional diversity was considered an indicator of healthier ecosystems and more stable NPP, which can be informed by *structural* diversity, such as total cover and richness [@alexander2023]. This is significant in the case of NCOS, as increasing native species abundance and diversity can enhance ecosystem health and resilience.
 
@@ -50,7 +50,7 @@ This study will pay close attention to Stipa pulchra — California's state gras
 
 **Data Collection and Study Area**
 
-To answer our research question, we used a vegetation dataset sourced from the Cheadle Center for Biodiversity and Ecological Restoration (CCBER), and provided to us by the ENVS 193DD course. This dataset spans 5 years (2021-2025) of vegetation data from across several habitats in North Campus Open Space (NCOS) including grasslands, mosaic habitats, wetlands, open water, woodlands, and shrublands. We chose to focus on native perennial grasslands, which encompasses measurements from 8 different transects across the 16.8-acre mesa. The method of data collection used for vegetation surveys is the Quadrat Transects (QT) method. This method involves the use of 11 one-square-meter quadrats placed by a 30-meter transect, with quadrats alternating between the left and right side of the transect line every 3 meters. “The quadrats are subdivided into 100 ten-centimeter squares and the percent cover is estimated \[by human monitors\] for each species in the quadrat,” (NCOS Restoration Project Monitoring Report).
+To answer our research question, we used a vegetation dataset sourced from the Cheadle Center for Biodiversity and Ecological Restoration (CCBER), and provided to us by the ENVS 193DD course. This dataset spans 5 years (2021-2025) of vegetation data from across several habitats in North Campus Open Space (NCOS) including grasslands, mosaic habitats, wetlands, open water, woodlands, and shrublands. We chose to focus on native perennial grasslands, which encompasses measurements from 8 different transects across the 16.8-acre mesa. The method of data collection used for vegetation surveys is the Quadrat Transects (QT) method. This method involves the use of 11 one-square-meter quadrats placed by a 30-meter transect, with quadrats alternating between the left and right side of the transect line every 3 meters. “The quadrats are subdivided into 100 ten-centimeter squares and the percent cover is estimated \[by human monitors\] for each species in the quadrat,” [@rickard2024].
 
 **Analytical Approach**
 
