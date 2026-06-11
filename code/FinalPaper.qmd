@@ -38,15 +38,11 @@ Restoration efforts at the North Campus Open Space (NCOS) are trying to increase
 
 Our native species of interest are:
 
-`Deinandra fasciculata`, `Distichlis spicata`, `Erigeron canadensis`,\
-`Stipa pulchra`,\
-`Symphyotrichum subulatum`,
+`Deinandra fasciculata`,\ `Distichlis spicata`,\ `Erigeron canadensis`,\ `Stipa pulchra`, `Symphyotrichum subulatum`,
 
 And our non-native species of interest are:
 
-`Bromus hordeaceus`, `Festuca myuros`,\
-`Festuca perennis`,\
-`Medicago polymorpha`, `Polypogon monspeliensis`.
+`Bromus hordeaceus`,\ `Festuca myuros`,\ `Festuca perennis`,\ `Medicago polymorpha`,\ `Polypogon monspeliensis`.
 
 This study will pay close attention to Stipa pulchra — California's state grass — as well as Festuca perennis, a non-native grass, as these species are greatly abundant across all eight grassland transects. Lastly, Deinandra fasciculata is a species endemic to the Santa Barbara region and was stated to have “responded well to the fire”, which might indicate that native species perform better after a prescribed burn [@rickard2024]. The monitoring report also stated that S. pulchra was predicted to respond well to the fires. Other factors besides native/non-native status will be taken into account in this study, such as perennial versus annual grasses. Monitoring plant cover and richness over time can best inform restoration experts how certain intentional or unintentional events affect overall restoration progress. A study conducted on a grassland habitat found that species show positive responses to water availability extremes as net primary productivity (NPP) increased during wet years. Additionally, functional diversity was considered an indicator of healthier ecosystems and more stable NPP, which can be informed by *structural* diversity, such as total cover and richness [@alexander2023]. This is significant in the case of NCOS, as increasing native species abundance and diversity can enhance ecosystem health and resilience.
 
@@ -54,12 +50,11 @@ This study will pay close attention to Stipa pulchra — California's state gras
 
 **Data Collection and Study Area**
 
-To answer our research question, we used a vegetation dataset sourced from the Cheadle Center for Biodiversity and Ecological Restoration (CCBER), and provided to us by the ENVS 193DD course. This dataset spans 5 years (2021-2025) of vegetation data from across several habitats in North Campus Open Space (NCOS) including grasslands, mosaic habitats, wetlands, open water, woodlands, and shrublands. We chose to focus on native perennial grasslands, which encompasses measurements from 8 different transects across the 16.8-acre mesa. The method of data collection used for vegetation surveys is the Quadrat Transects (QT) method. This method involves the use of 11 one-square-meter quadrats placed by a 30-meter transect, with quadrats alternating between the left and right side of the transect line every 3 meters. “The quadrats are subdivided into 100 ten-centimeter squares and the percent cover is estimated [by human monitors] for each species in the quadrat,” (NCOS Restoration Project Monitoring Report). 
+To answer our research question, we used a vegetation dataset sourced from the Cheadle Center for Biodiversity and Ecological Restoration (CCBER), and provided to us by the ENVS 193DD course. This dataset spans 5 years (2021-2025) of vegetation data from across several habitats in North Campus Open Space (NCOS) including grasslands, mosaic habitats, wetlands, open water, woodlands, and shrublands. We chose to focus on native perennial grasslands, which encompasses measurements from 8 different transects across the 16.8-acre mesa. The method of data collection used for vegetation surveys is the Quadrat Transects (QT) method. This method involves the use of 11 one-square-meter quadrats placed by a 30-meter transect, with quadrats alternating between the left and right side of the transect line every 3 meters. “The quadrats are subdivided into 100 ten-centimeter squares and the percent cover is estimated \[by human monitors\] for each species in the quadrat,” (NCOS Restoration Project Monitoring Report).
 
-**Analytical Approach** 
+**Analytical Approach**
 
-We will not be performing a formal statistical analysis for our project because we are primarily exploring a correlative relationship rather than predicting trends for species cover and richness. However, we will be identifying major events that might influence a directional response in vegetation percent cover and species richness, and examining whether a response was captured in our dataset. Major events include the prescribed burn in Fall 2023 because of its effects as an intermediate disturbance event, as well as wet (2023, 2024) and dry (2021, 2022) water years because water is a limiting resource for key native grass species (S. pulchra). These factors are potential influences on how percent cover and species richness change over time. This informal analysis will be conducted by examining the visual components of our figures. These visual components include changes in size or direction of geometries representing key variables, as well as geometries marking important contextual events. 
-
+We will not be performing a formal statistical analysis for our project because we are primarily exploring a correlative relationship rather than predicting trends for species cover and richness. However, we will be identifying major events that might influence a directional response in vegetation percent cover and species richness, and examining whether a response was captured in our data set. Major events include the prescribed burn in Fall 2023 because of its effects as an intermediate disturbance event, as well as wet (2023, 2024) and dry (2021, 2022) water years because water is a limiting resource for key native grass species (S. pulchra). These factors are potential influences on how percent cover and species richness change over time. This informal analysis will be conducted by examining the visual components of our figures. These visual components include changes in size or direction of geometries representing key variables, as well as geometries marking important contextual events.
 
 # Results
 
@@ -360,11 +355,22 @@ species_richness_bar_plot <- species_richness_summary |>
     fill = "Species Type"
   ) +
   # changing from default theme
-  theme_bw()
+  theme_bw() +
+  #customize plot
+  theme(
+    plot.title = element_text(
+      face = "bold",
+      size = 16
+    ),
+    axis.title = element_text(size = 12),
+    panel.grid.minor = element_blank()
+  )
 
 # display plot
 species_richness_bar_plot
 ```
+
+**Figure 1: Native species richness maintained similar levels while non-native species richness declined over time.** The x-axis represents time in years. The y-axis measures species richness across all transects for all species (not just selected species). Each column represents the total species count in a particular year. The dashed line marks the relative point in time between surveys when the prescribed burn occurred. 
 
 ```{r}
 #| label: figure-2
@@ -430,6 +436,15 @@ selected_pc_native <- selected_species_cover |>
   #change x axis text size
   theme(axis.text.x = element_text(size = 8)) +
   theme(strip.text.x = element_text(size = 7.5)) +
+  #customize plot
+  theme(
+    plot.title = element_text(
+      face = "bold",
+      size = 16
+    ),
+    axis.title = element_text(size = 12),
+    panel.grid.minor = element_blank()
+  ) +
   #remove legend
   theme(legend.position = "none")
 
@@ -491,12 +506,23 @@ selected_pc_nonnative <- selected_species_cover |>
   #change x axis text size
   theme(axis.text.x = element_text(size = 8)) + 
   theme(strip.text.x = element_text(size = 7.5)) +
+  #customize plot
+  theme(
+    plot.title = element_text(
+      face = "bold",
+      size = 16
+    ),
+    axis.title = element_text(size = 12),
+    panel.grid.minor = element_blank()
+  ) +
   #remove legend 
   theme(legend.position = "none")
 
 #combine native and non-native plots into one figure
 selected_pc_native/selected_pc_nonnative
 ```
+
+**Figure 2: On average, native vegetation appears to decrease or maintain their level of percent cover over time while non-native vegetation increase or maintain their level of percent cover over time.** The x-axis represents time in years. The y-axis measures total percent cover of vegetation across all quadrats in all transects. Vertices represent individual measurements. Line segments represent the change in total percent cover between years. Each panel shows the change in total percent cover over time for an individual species.
 
 ```{r}
 #| label: figure-3
@@ -531,8 +557,19 @@ gl_transects |>
     values = c("NON-NATIVE COVER" = "#C96B5C",
                "NATIVE COVER" = "#4A9782")) +
   # change theme
-  theme_bw()
+  theme_bw() +
+  #customize plot
+  theme(
+    plot.title = element_text(
+      face = "bold",
+      size = 16
+    ),
+    axis.title = element_text(size = 12),
+    panel.grid.minor = element_blank()
+  )
 ```
+
+**Figure 3: All transects besides 9 and 14 decrease or maintain their level of native percent cover, while non-native percent cover increases over time in all transects. Following the 2023 prescribed burn, percent cover from 2023 to 2024 increased only for transects 14 and 15 while decreasing or maintaining similar levels in the other 6 transects.** The x-axis represents time in years. The y-axis measures mean percent cover for each individual transect, grouped by all native vs non-native species (not just selected species).
 
 ```{r}
 #| label: stipa-jitter-plot
@@ -898,22 +935,21 @@ combined_species_plot <-
 combined_species_plot
 ```
 
-
+**Figure 4: Mean percent cover increased for species with low abundance and decreased for species with high abundance prior to the fire event. This was not limited to native versus non-native status. For example, S. pulchra (native) and F. Perennis (non-native) mean percent cover both decreased after the burn.** The x-axis represents time in years. The y-axis measures mean percent cover across all transects. Grey circles represent individual observations, while the green and purple dots mark the mean of those individual points. The dashed line marks the relative point in time between surveys when the prescribed burn occurred, and the blue highlighted section is a wetter-than-average year (2024).
 
 **Percent Cover and Species Richness Trends**
 
-Overall, our results show that both native and non-native species richness increased following the prescribed burn of fall 2023 and during the 2024 water year, with non-native richness having the largest increase. Concerning percent cover, we saw native percent cover increase in transects 14 and 15 after the burn, which are the closest transects to vernal pools 1 and 2. Non-native percent cover after the prescribed burn increased in transects 7, 10, 11, and 15, with non-native cover generally remaining relatively high across most transects during the study period. Spatially, as mentioned, we found that native species percent cover increased most strongly near vernal pools 1 and 2, which is significant because these vernal pools also experienced the greatest water depths during the 2024 water year. Lastly, we found that non-native percent cover and overall species richness increased most strongly in the southeastern grassland transects. 
+Overall, our results show that both native and non-native species richness increased following the prescribed burn of fall 2023 and during the 2024 water year, with non-native richness having the largest increase. Concerning percent cover, we saw native percent cover increase in transects 14 and 15 after the burn, which are the closest transects to vernal pools 1 and 2. Non-native percent cover after the prescribed burn increased in transects 7, 10, 11, and 15, with non-native cover generally remaining relatively high across most transects during the study period. Spatially, as mentioned, we found that native species percent cover increased most strongly near vernal pools 1 and 2, which is significant because these vernal pools also experienced the greatest water depths during the 2024 water year. Lastly, we found that non-native percent cover and overall species richness increased most strongly in the southeastern grassland transects.
 
 **Focal Species Trends**
 
-We also found several meaningful patterns concerning our focal species. The percent cover of Stipa pulchra, a key NCOS restoration target species, increased from 2021 to 2023; however, it declined after the burn and the 2024 water year, overall decreasing over time. The percent cover of Deinandra fasciculata, a species endemic to Santa Barbara, remained relatively low throughout the study period; however, percent cover increased slightly following the prescribed burn and during the 2024 water year. Concerning non-native focal species, we found that Festuca perennis, another restoration target, decreased slightly after the burn; however, it rebounded in 2025 and now has one of the highest percent covers out of any species. Polypogon monspeliensis did not seem to react to the burn as it increased slightly in 2024; however, it may have been outcompeted by other species during the 2024 water year, as it declined substantially in 2025 and now has a very small percent cover. 
-
+We also found several meaningful patterns concerning our focal species. The percent cover of Stipa pulchra, a key NCOS restoration target species, increased from 2021 to 2023; however, it declined after the burn and the 2024 water year, overall decreasing over time. The percent cover of Deinandra fasciculata, a species endemic to Santa Barbara, remained relatively low throughout the study period; however, percent cover increased slightly following the prescribed burn and during the 2024 water year. Concerning non-native focal species, we found that Festuca perennis, another restoration target, decreased slightly after the burn; however, it rebounded in 2025 and now has one of the highest percent covers out of any species. Polypogon monspeliensis did not seem to react to the burn as it increased slightly in 2024; however, it may have been out-competed by other species during the 2024 water year, as it declined substantially in 2025 and now has a very small percent cover.
 
 # Discussion
 
 **Connection to Existing Publications**
 
-Concerning Stipa pulchra, our results supported other relevant studies that also determined that prescribed fires had little positive effect on Stipa pulchra, a key NCOS restoration target [@keeley2023]. Its substantial decline in percent cover after the prescribed burn of fall 2023 is likely due to being outcompeted by invasive opportunistic annuals who are establishing faster following disturbances [@gornish2017; @hamilton1999]. As said in the monitoring report, it will likely take longer observation to determine whether declines in Stipa pulchra represent short-term responses to disturbance events or long-term trends. While we did see Festuca perennis decline slightly after the fire, it did rebound in 2025 and has increased over time; however, the rate of its increase has slowed after multiple disturbance events. Other grassland studies also found that Festuca perennis did increase after burns; however, it did have negative trends following large precipitation events [@keeley2023]. This could possibly be the reason why its rate of increase in percent cover has slowed after 2023 (because of the heavy 2024 water year). Our results also concur with the Gornish & Shaw study, which concluded that Deinandra fasciculata responds well to disturbances, as we have seen an overall increase in its relatively low percent cover over time, especially after the prescribed burn. 
+Concerning Stipa pulchra, our results supported other relevant studies that also determined that prescribed fires had little positive effect on Stipa pulchra, a key NCOS restoration target [@keeley2023]. Its substantial decline in percent cover after the prescribed burn of fall 2023 is likely due to being outcompeted by invasive opportunistic annuals who are establishing faster following disturbances [@gornish2017; @hamilton1999]. As said in the monitoring report, it will likely take longer observation to determine whether declines in Stipa pulchra represent short-term responses to disturbance events or long-term trends. While we did see Festuca perennis decline slightly after the fire, it did rebound in 2025 and has increased over time; however, the rate of its increase has slowed after multiple disturbance events. Other grassland studies also found that Festuca perennis did increase after burns; however, it did have negative trends following large precipitation events [@keeley2023]. This could possibly be the reason why its rate of increase in percent cover has slowed after 2023 (because of the heavy 2024 water year). Our results also concur with the Gornish & Shaw study, which concluded that Deinandra fasciculata responds well to disturbances, as we have seen an overall increase in its relatively low percent cover over time, especially after the prescribed burn.
 
 Our results concerning how native and non-native species reacted to disturbance events such as the fall 2023 prescribed burn and 2024 water year followed similarly to existing studies. Among our key species, we consistently found that non-native annuals were outcompeting native perennials, as trends between the two were often inverse [@corbin2010; @gornish2017]. This is due to annual species with shallow root systems often being able to establish quicker after disturbance events. Even among our key perennial and annual species, without distinguishing between native and non-native species, we found generally annual species were outperforming perennials; for example, even though we saw Stipa pulchra decline, Deinandra fasciculata, an annual native, has increased over time. One notable exception, however, is Distichlis spicata, which is a native perennial that has been thriving at NCOS. This is likely due to it being a very salt-, drought-, and stress-tolerant species that has adapted to many California habitats [@pessarakli2012].
 
